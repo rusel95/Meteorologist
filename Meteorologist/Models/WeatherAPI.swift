@@ -25,7 +25,7 @@ class WeatherAPI {
         
         var path: String {
             switch self {
-            case .weatherForCityWith(let city): return baseUrl + token + city.rawValue
+            case .weatherForCityWith(let city): return baseUrl + token + city.coords
             }
         }
         

@@ -26,7 +26,7 @@ class MainVC: UIViewController {
         }
     }
     
-    var weatherItems: [WeatherItem]! {
+    var weatherItems: [WeatherItem]? {
         didSet {
             tableView.reloadData()
         }
@@ -47,9 +47,15 @@ class MainVC: UIViewController {
     }
     
     func getWeatherAt(city: City) {
+        SVProgressHUD.show()
         WeatherAPI.getWeatherFor(city: City.Dnipro) { [unowned self] (weather, error) in
             if let weather = weather {
-                weatherTypeSegmentedControl.selectedSegmentIndex == 0 ? weatherItems = weather.hourly : weatherItems = weather.daily
+                SVProgressHUD.dismiss()
+                if self.weatherTypeSegmentedControl.selectedSegmentIndex == 0 {
+                    self.weatherItems = weather.hourly
+                } else {
+                    self.weatherItems = weather.daily
+                }
             } else if let error = error {
                 SVProgressHUD.show(withStatus: error)
             }
@@ -61,12 +67,12 @@ class MainVC: UIViewController {
 
 extension MainVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return weatherItems.count
+        return weatherItems?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.weatherItemTVC, for: indexPath)
-        cell?.weatherItem = weatherItems[indexPath.row]
+        cell?.weatherItem = weatherItems?[indexPath.row]
         return cell ?? UITableViewCell()
     }
 }
@@ -78,6 +84,10 @@ extension MainVC: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return cities.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return String( cities[row].name )
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {

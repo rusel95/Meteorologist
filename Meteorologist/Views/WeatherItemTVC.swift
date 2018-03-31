@@ -18,18 +18,21 @@ class WeatherItemTVC: UITableViewCell {
     @IBOutlet weak var pressureLabel: UILabel!
     @IBOutlet weak var windSpeed: UILabel!
     
-    var weatherItem: WeatherItem!
+    var weatherItem: WeatherItem! {
+        didSet {
+            let dateFormatter = DateFormatter(withFormat: "yyyy-MM-dd", locale: "ua_UA")
+            dateLabel.text = dateFormatter.string(from: weatherItem.time)
+            summaryLabel.text = weatherItem.summary
+            humidityLabel.text = String(weatherItem.humidity)
+            temperatureLabel.text = String(weatherItem.temperature)
+            pressureLabel.text = String(weatherItem.pressure)
+            windSpeed.text = String(weatherItem.windSpeed)
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        let dateFormatter = DateFormatter(withFormat: "yyyy-MM-dd", locale: "ua_UA")
-        dateLabel.text = dateFormatter.string(from: weatherItem.time)
-        summaryLabel.text = weatherItem.summary
-        humidityLabel.text = String(weatherItem.humidity)
-        temperatureLabel.text = String(weatherItem.temperature)
-        pressureLabel.text = String(weatherItem.pressure)
-        windSpeed.text = String(weatherItem.windSpeed)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

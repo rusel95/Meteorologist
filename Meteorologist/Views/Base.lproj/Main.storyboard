@@ -50,7 +50,24 @@
                                     </tableView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8op-8A-CbT">
                                         <rect key="frame" x="0.0" y="433" width="375" height="126"/>
-                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <subviews>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" momentary="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1tL-Uq-tXu">
+                                                <rect key="frame" x="16" y="92" width="343" height="29"/>
+                                                <segments>
+                                                    <segment title="hourly"/>
+                                                    <segment title="daily"/>
+                                                </segments>
+                                                <connections>
+                                                    <action selector="weatherTypeChanged:" destination="34w-ce-lpF" eventType="valueChanged" id="tGg-fn-cyL"/>
+                                                </connections>
+                                            </segmentedControl>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="1tL-Uq-tXu" secondAttribute="bottom" constant="6" id="03x-sg-eKi"/>
+                                            <constraint firstAttribute="trailing" secondItem="1tL-Uq-tXu" secondAttribute="trailing" constant="16" id="27l-B4-oQc"/>
+                                            <constraint firstItem="1tL-Uq-tXu" firstAttribute="leading" secondItem="8op-8A-CbT" secondAttribute="leading" constant="16" id="jEg-MS-OdJ"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -73,27 +90,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Pd1-q2-JBs"/>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem title="asdf" style="done" id="JL9-Mr-LmQ" userLabel="item">
-                            <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bar" selectedSegmentIndex="0" momentary="YES" id="hg6-6e-STT">
-                                <rect key="frame" x="16" y="7" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="hourly"/>
-                                    <segment title="daily"/>
-                                </segments>
-                                <connections>
-                                    <action selector="weatherTypeChanged:" destination="34w-ce-lpF" eventType="valueChanged" id="3wN-rg-40N"/>
-                                </connections>
-                            </segmentedControl>
-                        </barButtonItem>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Meteorologist" id="43J-sU-uNH"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="cityPickerView" destination="9tF-A9-A6W" id="dki-4h-6N6"/>
                         <outlet property="tableView" destination="dbS-6W-Poj" id="KfL-se-nz1"/>
-                        <outlet property="weatherTypeSegmentedControl" destination="hg6-6e-STT" id="s1U-8o-huF"/>
+                        <outlet property="weatherTypeSegmentedControl" destination="1tL-Uq-tXu" id="8Wj-tz-c2p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HCm-mN-KWh" userLabel="First Responder" sceneMemberID="firstResponder"/>

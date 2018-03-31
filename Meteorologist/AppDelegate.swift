@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import SVProgressHUD
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,9 +18,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-
+        setupAppeareance()
         
         return true
+    }
+    
+    func setupAppeareance() {
+        SVProgressHUD.setDefaultStyle(.light)
+        SVProgressHUD.setBackgroundColor(UIColor.white.withAlphaComponent(0.9))
+        SVProgressHUD.setForegroundColor(UIColor.blue)
+        SVProgressHUD.setMinimumDismissTimeInterval(1.5)
+        SVProgressHUD.setMaximumDismissTimeInterval(5.0)
+        UIApplication.shared.statusBarStyle = .lightContent
+        UINavigationBar.appearance().barTintColor = UIColor.white
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().titleTextAttributes = [
+            NSAttributedStringKey.foregroundColor: UIColor.white
+        ]
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

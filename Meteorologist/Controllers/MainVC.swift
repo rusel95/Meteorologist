@@ -16,7 +16,11 @@ class MainVC: UIViewController {
     @IBOutlet weak var weatherTypeSegmentedControl: UISegmentedControl!
     
     @IBAction func weatherTypeChanged(_ sender: UISegmentedControl) {
-        getWeatherAt(city: choosedCity)
+        if sender.selectedSegmentIndex == 0 {
+            weatherItems = weather.hourly
+        } else {
+            weatherItems = weather.daily
+        }
     }
     
     var cities: [City]! = [City.Dnipro, City.Dubai, City.Kanberra, City.Kiev]
@@ -28,11 +32,21 @@ class MainVC: UIViewController {
     
     var weatherItems: [WeatherItem]? {
         didSet {
-            tableView.reloadData()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
     }
     
-    //var weather: Weather!
+    var weather: Weather! {
+        didSet {
+            if self.weatherTypeSegmentedControl.selectedSegmentIndex == 0 {
+                self.weatherItems = weather.hourly
+            } else {
+                self.weatherItems = weather.daily
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,11 +65,7 @@ class MainVC: UIViewController {
         WeatherAPI.getWeatherFor(city: City.Dnipro) { [unowned self] (weather, error) in
             if let weather = weather {
                 SVProgressHUD.dismiss()
-                if self.weatherTypeSegmentedControl.selectedSegmentIndex == 0 {
-                    self.weatherItems = weather.hourly
-                } else {
-                    self.weatherItems = weather.daily
-                }
+                self.weather = weather
             } else if let error = error {
                 SVProgressHUD.show(withStatus: error)
             }

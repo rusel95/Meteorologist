@@ -24,7 +24,7 @@ class WeatherItemTVC: UITableViewCell {
             dateLabel.text = dateFormatter.string(from: weatherItem.time)
             summaryLabel.text = weatherItem.summary
             humidityLabel.text = String(weatherItem.humidity)
-            temperatureLabel.text = String(weatherItem.temperature)
+            temperatureLabel.text = String(weatherItem.temperature ?? 0.0)
             pressureLabel.text = String(weatherItem.pressure)
             windSpeed.text = String(weatherItem.windSpeed)
         }

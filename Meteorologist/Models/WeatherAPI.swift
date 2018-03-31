@@ -43,11 +43,10 @@ class WeatherAPI {
         Alamofire.request(request.path, method: request.method, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseJSON { response in
             switch response.result {
             case .success(let json):
-                print(#function, json)
                 if let weather = Mapper<Weather>().map(JSON: json as! [String : Any]) {
                     closure(weather, nil)
                 } else {
-                    closure( nil, "Some unknown error" )
+                    closure( nil, "Can`t parse json to Weather" )
                 }
                 
             case .failure(let error):

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="w7X-0Z-Qgh">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="G8p-dp-PsW">
+            <objects>
+                <navigationController id="w7X-0Z-Qgh" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="12o-pU-Shs">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="34w-ce-lpF" kind="relationship" relationship="rootViewController" id="EJh-O2-1y0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SIT-im-Vyi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1195" y="110"/>
+        </scene>
+        <!--Meteorologist-->
+        <scene sceneID="qXl-p6-6hk">
+            <objects>
+                <viewController id="34w-ce-lpF" customClass="MainVC" customModule="Meteorologist" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fNG-Hc-gMb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="f1p-sS-nIW">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9tF-A9-A6W">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="F7e-uu-IvB"/>
+                                        </constraints>
+                                    </pickerView>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dbS-6W-Poj">
+                                        <rect key="frame" x="0.0" y="120" width="375" height="313"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8op-8A-CbT">
+                                        <rect key="frame" x="0.0" y="433" width="375" height="126"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="9tF-A9-A6W" firstAttribute="top" secondItem="f1p-sS-nIW" secondAttribute="top" id="0B5-XZ-dPC"/>
+                                    <constraint firstItem="8op-8A-CbT" firstAttribute="height" secondItem="dbS-6W-Poj" secondAttribute="height" multiplier="0.4" id="3LX-sd-MA1"/>
+                                    <constraint firstItem="dbS-6W-Poj" firstAttribute="top" secondItem="9tF-A9-A6W" secondAttribute="bottom" id="XPr-qe-zkh"/>
+                                    <constraint firstItem="9tF-A9-A6W" firstAttribute="leading" secondItem="f1p-sS-nIW" secondAttribute="leading" id="YcU-pv-SH7"/>
+                                    <constraint firstAttribute="trailing" secondItem="9tF-A9-A6W" secondAttribute="trailing" id="ijK-Q5-kvQ"/>
+                                    <constraint firstItem="dbS-6W-Poj" firstAttribute="width" secondItem="f1p-sS-nIW" secondAttribute="width" id="tN9-S5-d5M"/>
+                                    <constraint firstItem="8op-8A-CbT" firstAttribute="width" secondItem="f1p-sS-nIW" secondAttribute="width" id="ukY-4o-2if"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="f1p-sS-nIW" firstAttribute="top" secondItem="Pd1-q2-JBs" secondAttribute="top" id="Y4A-I4-Xgx"/>
+                            <constraint firstItem="f1p-sS-nIW" firstAttribute="leading" secondItem="Pd1-q2-JBs" secondAttribute="leading" id="e8n-O7-aVA"/>
+                            <constraint firstItem="Pd1-q2-JBs" firstAttribute="trailing" secondItem="f1p-sS-nIW" secondAttribute="trailing" id="lTS-uJ-6gS"/>
+                            <constraint firstItem="Pd1-q2-JBs" firstAttribute="bottom" secondItem="f1p-sS-nIW" secondAttribute="bottom" id="sTc-IV-39b"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Pd1-q2-JBs"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="asdf" style="done" id="JL9-Mr-LmQ" userLabel="item">
+                            <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bar" selectedSegmentIndex="0" momentary="YES" id="hg6-6e-STT">
+                                <rect key="frame" x="16" y="7" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="hourly"/>
+                                    <segment title="daily"/>
+                                </segments>
+                                <connections>
+                                    <action selector="weatherTypeChanged:" destination="34w-ce-lpF" eventType="valueChanged" id="3wN-rg-40N"/>
+                                </connections>
+                            </segmentedControl>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Meteorologist" id="43J-sU-uNH"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="cityPickerView" destination="9tF-A9-A6W" id="dki-4h-6N6"/>
+                        <outlet property="tableView" destination="dbS-6W-Poj" id="KfL-se-nz1"/>
+                        <outlet property="weatherTypeSegmentedControl" destination="hg6-6e-STT" id="s1U-8o-huF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HCm-mN-KWh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-410.39999999999998" y="108.39580209895054"/>
+        </scene>
+    </scenes>
+</document>

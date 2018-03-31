@@ -3,17 +3,26 @@ PODS:
   - AlamofireImage (3.3.0):
     - Alamofire (~> 4.5)
   - ObjectMapper (3.1.0)
+  - R.swift (4.0.0):
+    - R.swift.Library (~> 4.0.0)
+  - R.swift.Library (4.0.0)
+  - SVProgressHUD (2.2.2)
 
 DEPENDENCIES:
   - Alamofire
   - AlamofireImage
   - ObjectMapper
+  - R.swift
+  - SVProgressHUD
 
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   AlamofireImage: 2e784dc5d00f04903a52c1d169181469c805c3df
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
+  R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
+  R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
+  SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
 
-PODFILE CHECKSUM: ebaa7445f6d67dc04175c7421c1ba8455d45e72b
+PODFILE CHECKSUM: b335601d5c1ce294bfcb96dc8fc1136867ae986a
 
 COCOAPODS: 1.4.0

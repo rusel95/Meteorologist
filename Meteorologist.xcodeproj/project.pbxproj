@@ -9,30 +9,36 @@
 /* Begin PBXBuildFile section */
 		6ACD76850E41F59B5CF44078 /* Pods_Meteorologist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3ED3FB832EA84EF18F0B6D /* Pods_Meteorologist.framework */; };
 		744805F9206FCD50006D7406 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744805F8206FCD50006D7406 /* Weather.swift */; };
-		744805FC206FCE09006D7406 /* Cities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744805FB206FCE09006D7406 /* Cities.swift */; };
+		744805FC206FCE09006D7406 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744805FB206FCE09006D7406 /* City.swift */; };
+		74480606206FDE4D006D7406 /* WeatherItemTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74480604206FDE4D006D7406 /* WeatherItemTVC.swift */; };
+		74480607206FDE4D006D7406 /* WeatherItemTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74480605206FDE4D006D7406 /* WeatherItemTVC.xib */; };
 		74C01BFA206F73CF0061E8ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C01BF9206F73CF0061E8ED /* AppDelegate.swift */; };
-		74C01BFC206F73CF0061E8ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C01BFB206F73CF0061E8ED /* ViewController.swift */; };
+		74C01BFC206F73CF0061E8ED /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C01BFB206F73CF0061E8ED /* MainVC.swift */; };
 		74C01BFF206F73CF0061E8ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74C01BFD206F73CF0061E8ED /* Main.storyboard */; };
 		74C01C02206F73CF0061E8ED /* Meteorologist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 74C01C00206F73CF0061E8ED /* Meteorologist.xcdatamodeld */; };
 		74C01C04206F73CF0061E8ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74C01C03206F73CF0061E8ED /* Assets.xcassets */; };
 		74C01C07206F73CF0061E8ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74C01C05206F73CF0061E8ED /* LaunchScreen.storyboard */; };
 		74C01C0F206F779A0061E8ED /* WeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C01C0E206F779A0061E8ED /* WeatherAPI.swift */; };
+		74E61FF32070058900B4FBB6 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E61FF22070058900B4FBB6 /* R.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0B3DBF3C3774B77AE3B4FE0C /* Pods-Meteorologist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meteorologist.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Meteorologist/Pods-Meteorologist.debug.xcconfig"; sourceTree = "<group>"; };
 		58DF880D2DD69AB1BDF84E7C /* Pods-Meteorologist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meteorologist.release.xcconfig"; path = "Pods/Target Support Files/Pods-Meteorologist/Pods-Meteorologist.release.xcconfig"; sourceTree = "<group>"; };
 		744805F8206FCD50006D7406 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
-		744805FB206FCE09006D7406 /* Cities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cities.swift; sourceTree = "<group>"; };
+		744805FB206FCE09006D7406 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		74480604206FDE4D006D7406 /* WeatherItemTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherItemTVC.swift; sourceTree = "<group>"; };
+		74480605206FDE4D006D7406 /* WeatherItemTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherItemTVC.xib; sourceTree = "<group>"; };
 		74C01BF6206F73CF0061E8ED /* Meteorologist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meteorologist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74C01BF9206F73CF0061E8ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		74C01BFB206F73CF0061E8ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		74C01BFB206F73CF0061E8ED /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		74C01BFE206F73CF0061E8ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		74C01C01206F73CF0061E8ED /* Meteorologist.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Meteorologist.xcdatamodel; sourceTree = "<group>"; };
 		74C01C03206F73CF0061E8ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74C01C06206F73CF0061E8ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		74C01C08206F73CF0061E8ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74C01C0E206F779A0061E8ED /* WeatherAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPI.swift; sourceTree = "<group>"; };
+		74E61FF22070058900B4FBB6 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		DD3ED3FB832EA84EF18F0B6D /* Pods_Meteorologist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Meteorologist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -60,11 +66,41 @@
 		744805FA206FCD58006D7406 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				744805FB206FCE09006D7406 /* Cities.swift */,
+				744805FB206FCE09006D7406 /* City.swift */,
 				744805F8206FCD50006D7406 /* Weather.swift */,
 				74C01C0E206F779A0061E8ED /* WeatherAPI.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		744805FD206FD9BA006D7406 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				74C01BFB206F73CF0061E8ED /* MainVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		744805FE206FD9D2006D7406 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				74E61FF22070058900B4FBB6 /* R.generated.swift */,
+				74C01C03206F73CF0061E8ED /* Assets.xcassets */,
+				74C01C05206F73CF0061E8ED /* LaunchScreen.storyboard */,
+				74C01C08206F73CF0061E8ED /* Info.plist */,
+				74C01C00206F73CF0061E8ED /* Meteorologist.xcdatamodeld */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		744805FF206FD9DD006D7406 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				74C01BFD206F73CF0061E8ED /* Main.storyboard */,
+				74480604206FDE4D006D7406 /* WeatherItemTVC.swift */,
+				74480605206FDE4D006D7406 /* WeatherItemTVC.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		74C01BED206F73CF0061E8ED = {
@@ -89,13 +125,10 @@
 			isa = PBXGroup;
 			children = (
 				74C01BF9206F73CF0061E8ED /* AppDelegate.swift */,
-				74C01BFB206F73CF0061E8ED /* ViewController.swift */,
 				744805FA206FCD58006D7406 /* Models */,
-				74C01BFD206F73CF0061E8ED /* Main.storyboard */,
-				74C01C03206F73CF0061E8ED /* Assets.xcassets */,
-				74C01C05206F73CF0061E8ED /* LaunchScreen.storyboard */,
-				74C01C08206F73CF0061E8ED /* Info.plist */,
-				74C01C00206F73CF0061E8ED /* Meteorologist.xcdatamodeld */,
+				744805FF206FD9DD006D7406 /* Views */,
+				744805FD206FD9BA006D7406 /* Controllers */,
+				744805FE206FD9D2006D7406 /* Support */,
 			);
 			path = Meteorologist;
 			sourceTree = "<group>";
@@ -116,6 +149,7 @@
 			buildConfigurationList = 74C01C0B206F73CF0061E8ED /* Build configuration list for PBXNativeTarget "Meteorologist" */;
 			buildPhases = (
 				182D155ECA39BF65DCC9627C /* [CP] Check Pods Manifest.lock */,
+				74E61FF1207004B000B4FBB6 /* ShellScript */,
 				74C01BF2206F73CF0061E8ED /* Sources */,
 				74C01BF3206F73CF0061E8ED /* Frameworks */,
 				74C01BF4206F73CF0061E8ED /* Resources */,
@@ -138,7 +172,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Ruslan Popesku";
 				TargetAttributes = {
 					74C01BF5206F73CF0061E8ED = {
@@ -171,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74C01C07206F73CF0061E8ED /* LaunchScreen.storyboard in Resources */,
+				74480607206FDE4D006D7406 /* WeatherItemTVC.xib in Resources */,
 				74C01C04206F73CF0061E8ED /* Assets.xcassets in Resources */,
 				74C01BFF206F73CF0061E8ED /* Main.storyboard in Resources */,
 			);
@@ -212,6 +247,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Meteorologist/Pods-Meteorologist-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		74E61FF1207004B000B4FBB6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/Meteorologist/Support\"";
+		};
 		CD48161067AD6DE562214190 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -222,12 +270,16 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -241,12 +293,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				744805FC206FCE09006D7406 /* Cities.swift in Sources */,
+				744805FC206FCE09006D7406 /* City.swift in Sources */,
 				74C01C02206F73CF0061E8ED /* Meteorologist.xcdatamodeld in Sources */,
 				74C01C0F206F779A0061E8ED /* WeatherAPI.swift in Sources */,
-				74C01BFC206F73CF0061E8ED /* ViewController.swift in Sources */,
+				74E61FF32070058900B4FBB6 /* R.generated.swift in Sources */,
+				74C01BFC206F73CF0061E8ED /* MainVC.swift in Sources */,
 				74C01BFA206F73CF0061E8ED /* AppDelegate.swift in Sources */,
 				744805F9206FCD50006D7406 /* Weather.swift in Sources */,
+				74480606206FDE4D006D7406 /* WeatherItemTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +340,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -293,6 +348,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -320,7 +376,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -343,6 +399,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -350,6 +407,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -371,7 +429,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -386,8 +444,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46V7933WWZ;
-				INFOPLIST_FILE = Meteorologist/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				INFOPLIST_FILE = Meteorologist/Support/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rusel95.Meteorologist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -403,8 +461,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46V7933WWZ;
-				INFOPLIST_FILE = Meteorologist/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				INFOPLIST_FILE = Meteorologist/Support/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rusel95.Meteorologist;
 				PRODUCT_NAME = "$(TARGET_NAME)";

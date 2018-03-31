@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6ACD76850E41F59B5CF44078 /* Pods_Meteorologist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3ED3FB832EA84EF18F0B6D /* Pods_Meteorologist.framework */; };
 		74C01BFA206F73CF0061E8ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C01BF9206F73CF0061E8ED /* AppDelegate.swift */; };
 		74C01BFC206F73CF0061E8ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C01BFB206F73CF0061E8ED /* ViewController.swift */; };
 		74C01BFF206F73CF0061E8ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74C01BFD206F73CF0061E8ED /* Main.storyboard */; };
 		74C01C02206F73CF0061E8ED /* Meteorologist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 74C01C00206F73CF0061E8ED /* Meteorologist.xcdatamodeld */; };
 		74C01C04206F73CF0061E8ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74C01C03206F73CF0061E8ED /* Assets.xcassets */; };
 		74C01C07206F73CF0061E8ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74C01C05206F73CF0061E8ED /* LaunchScreen.storyboard */; };
+		74C01C0F206F779A0061E8ED /* WeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C01C0E206F779A0061E8ED /* WeatherAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B3DBF3C3774B77AE3B4FE0C /* Pods-Meteorologist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meteorologist.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Meteorologist/Pods-Meteorologist.debug.xcconfig"; sourceTree = "<group>"; };
+		58DF880D2DD69AB1BDF84E7C /* Pods-Meteorologist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meteorologist.release.xcconfig"; path = "Pods/Target Support Files/Pods-Meteorologist/Pods-Meteorologist.release.xcconfig"; sourceTree = "<group>"; };
 		74C01BF6206F73CF0061E8ED /* Meteorologist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meteorologist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74C01BF9206F73CF0061E8ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74C01BFB206F73CF0061E8ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +28,8 @@
 		74C01C03206F73CF0061E8ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74C01C06206F73CF0061E8ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		74C01C08206F73CF0061E8ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74C01C0E206F779A0061E8ED /* WeatherAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPI.swift; sourceTree = "<group>"; };
+		DD3ED3FB832EA84EF18F0B6D /* Pods_Meteorologist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Meteorologist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6ACD76850E41F59B5CF44078 /* Pods_Meteorologist.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		65AED70A3BE88ED408CA4079 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0B3DBF3C3774B77AE3B4FE0C /* Pods-Meteorologist.debug.xcconfig */,
+				58DF880D2DD69AB1BDF84E7C /* Pods-Meteorologist.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		74C01BED206F73CF0061E8ED = {
 			isa = PBXGroup;
 			children = (
 				74C01BF8206F73CF0061E8ED /* Meteorologist */,
 				74C01BF7206F73CF0061E8ED /* Products */,
+				65AED70A3BE88ED408CA4079 /* Pods */,
+				A68A2667D3A23A1A15F8FC82 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +76,7 @@
 			children = (
 				74C01BF9206F73CF0061E8ED /* AppDelegate.swift */,
 				74C01BFB206F73CF0061E8ED /* ViewController.swift */,
+				74C01C0E206F779A0061E8ED /* WeatherAPI.swift */,
 				74C01BFD206F73CF0061E8ED /* Main.storyboard */,
 				74C01C03206F73CF0061E8ED /* Assets.xcassets */,
 				74C01C05206F73CF0061E8ED /* LaunchScreen.storyboard */,
@@ -67,6 +86,14 @@
 			path = Meteorologist;
 			sourceTree = "<group>";
 		};
+		A68A2667D3A23A1A15F8FC82 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD3ED3FB832EA84EF18F0B6D /* Pods_Meteorologist.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 74C01C0B206F73CF0061E8ED /* Build configuration list for PBXNativeTarget "Meteorologist" */;
 			buildPhases = (
+				182D155ECA39BF65DCC9627C /* [CP] Check Pods Manifest.lock */,
 				74C01BF2206F73CF0061E8ED /* Sources */,
 				74C01BF3206F73CF0061E8ED /* Frameworks */,
 				74C01BF4206F73CF0061E8ED /* Resources */,
+				CD48161067AD6DE562214190 /* [CP] Embed Pods Frameworks */,
+				37C58D32523E98CC2E3D12EE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -134,12 +164,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		182D155ECA39BF65DCC9627C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Meteorologist-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		37C58D32523E98CC2E3D12EE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Meteorologist/Pods-Meteorologist-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD48161067AD6DE562214190 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Meteorologist/Pods-Meteorologist-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Meteorologist/Pods-Meteorologist-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		74C01BF2206F73CF0061E8ED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				74C01C02206F73CF0061E8ED /* Meteorologist.xcdatamodeld in Sources */,
+				74C01C0F206F779A0061E8ED /* WeatherAPI.swift in Sources */,
 				74C01BFC206F73CF0061E8ED /* ViewController.swift in Sources */,
 				74C01BFA206F73CF0061E8ED /* AppDelegate.swift in Sources */,
 			);
@@ -276,6 +365,7 @@
 		};
 		74C01C0C206F73CF0061E8ED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B3DBF3C3774B77AE3B4FE0C /* Pods-Meteorologist.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -292,6 +382,7 @@
 		};
 		74C01C0D206F73CF0061E8ED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58DF880D2DD69AB1BDF84E7C /* Pods-Meteorologist.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

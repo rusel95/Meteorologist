@@ -1,0 +1,6 @@
+framework module Pods_Meteorologist {
+  umbrella header "Pods-Meteorologist-umbrella.h"
+
+  export *
+  module * { export * }
+}

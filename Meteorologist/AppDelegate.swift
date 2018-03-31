@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         WeatherAPI.getWeatherFor(city: Cities.Dnipro) { (weather, error) in
-            print(weather, error)
+            print(weather?.timezone, error)
         }
         
         return true

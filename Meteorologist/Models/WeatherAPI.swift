@@ -7,23 +7,7 @@
 //
 
 import Alamofire
-import AlamofireObjectMapper
 import ObjectMapper
-import CoreLocation
-
-class Weather: Mappable {
-    var timezone: String?
-    required init?(map: Map) {
-        
-    }
-    func mapping(map: Map) {
-       timezone <- map["latitude"]
-    }
-}
-
-enum Cities: String {
-    case Dnipro = "48.478803,35.022301"
-}
 
 class WeatherAPI {
     
@@ -57,7 +41,19 @@ class WeatherAPI {
     static func getWeatherFor(city: Cities, closure: @escaping (_ handler: Weather?, _ error: String?) -> Void) {
         let request = Route.weatherForCityWith(coords: city)
         Alamofire.request(request.path, method: request.method, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseJSON { response in
-            print(response)
+            switch response.result {
+            case .success(let json):
+                print(#function, json)
+                if let weather = Mapper<Weather>().map(JSON: json as! [String : Any]) {
+                    closure(weather, nil)
+                } else {
+                    closure( nil, "Some unknown error" )
+                }
+                
+            case .failure(let error):
+                print(#function, error.localizedDescription)
+                closure(nil, error.localizedDescription)
+            }
         }
     }
     

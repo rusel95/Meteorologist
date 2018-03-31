@@ -8,5 +8,5 @@ target 'Meteorologist' do
   # Pods for Meteorologist
 	pod 'Alamofire'
    	pod 'AlamofireImage'
-    pod 'AlamofireObjectMapper'
+    pod 'ObjectMapper'
 end

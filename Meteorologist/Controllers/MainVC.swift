@@ -8,12 +8,15 @@
 
 import UIKit
 import SVProgressHUD
+import ScrollableGraphView
+
 
 class MainVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var cityPickerView: UIPickerView!
     @IBOutlet weak var weatherTypeSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var weatherScrollableView: ScrollableGraphView!
     
     @IBAction func weatherTypeChanged(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
@@ -56,6 +59,7 @@ class MainVC: UIViewController {
         tableView.register(R.nib.weatherItemTVC)
         cityPickerView.delegate = self
         cityPickerView.dataSource = self
+        weatherScrollableView.dataSource = self
         
         getWeatherAt(city: choosedCity)
     }
@@ -70,6 +74,9 @@ class MainVC: UIViewController {
                 SVProgressHUD.show(withStatus: error)
             }
         }
+    }
+    
+    func setupScrollableGraph() {
     }
 
 
@@ -105,3 +112,25 @@ extension MainVC: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
 }
+
+extension MainVC: ScrollableGraphViewDataSource {
+    func value(forPlot plot: Plot, atIndex pointIndex: Int) -> Double {
+        switch(plot.identifier) {
+        case "line":
+            return linePlotData[pointIndex]
+        default:
+            return 0
+        }
+    }
+    
+    func label(atIndex pointIndex: Int) -> String {
+        <#code#>
+    }
+    
+    func numberOfPoints() -> Int {
+        <#code#>
+    }
+    
+    
+}
+

@@ -6,6 +6,7 @@ PODS:
   - R.swift (4.0.0):
     - R.swift.Library (~> 4.0.0)
   - R.swift.Library (4.0.0)
+  - ScrollableGraphView (4.0.4)
   - SVProgressHUD (2.2.2)
 
 DEPENDENCIES:
@@ -13,6 +14,7 @@ DEPENDENCIES:
   - AlamofireImage
   - ObjectMapper
   - R.swift
+  - ScrollableGraphView (~> 4.0.0)
   - SVProgressHUD
 
 SPEC CHECKSUMS:
@@ -21,8 +23,9 @@ SPEC CHECKSUMS:
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
   R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
   R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
+  ScrollableGraphView: 072ea302f4ca27779692656a49d51fe537b2b1e7
   SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
 
-PODFILE CHECKSUM: b335601d5c1ce294bfcb96dc8fc1136867ae986a
+PODFILE CHECKSUM: 4cd944f53442b5385ee4a55802995c7cce41e139
 
 COCOAPODS: 1.4.0

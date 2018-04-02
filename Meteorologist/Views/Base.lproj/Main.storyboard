@@ -39,40 +39,37 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                 <subviews>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9tF-A9-A6W">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="120" id="F7e-uu-IvB"/>
+                                            <constraint firstAttribute="height" constant="100" id="F7e-uu-IvB"/>
                                         </constraints>
                                     </pickerView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dbS-6W-Poj">
-                                        <rect key="frame" x="0.0" y="120" width="375" height="313"/>
+                                        <rect key="frame" x="0.0" y="100" width="375" height="252.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8op-8A-CbT">
-                                        <rect key="frame" x="0.0" y="433" width="375" height="126"/>
-                                        <subviews>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" momentary="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1tL-Uq-tXu">
-                                                <rect key="frame" x="16" y="92" width="343" height="29"/>
-                                                <segments>
-                                                    <segment title="hourly"/>
-                                                    <segment title="daily"/>
-                                                </segments>
-                                                <connections>
-                                                    <action selector="weatherTypeChanged:" destination="34w-ce-lpF" eventType="valueChanged" id="tGg-fn-cyL"/>
-                                                </connections>
-                                            </segmentedControl>
-                                        </subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8op-8A-CbT" customClass="ScrollableGraphView" customModule="ScrollableGraphView">
+                                        <rect key="frame" x="0.0" y="352.5" width="375" height="176.5"/>
                                         <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="1tL-Uq-tXu" secondAttribute="bottom" constant="6" id="03x-sg-eKi"/>
-                                            <constraint firstAttribute="trailing" secondItem="1tL-Uq-tXu" secondAttribute="trailing" constant="16" id="27l-B4-oQc"/>
-                                            <constraint firstItem="1tL-Uq-tXu" firstAttribute="leading" secondItem="8op-8A-CbT" secondAttribute="leading" constant="16" id="jEg-MS-OdJ"/>
-                                        </constraints>
                                     </view>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" momentary="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1tL-Uq-tXu">
+                                        <rect key="frame" x="0.0" y="529" width="375" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Hqg-qD-HJu"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="hourly"/>
+                                            <segment title="daily"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="weatherTypeChanged:" destination="34w-ce-lpF" eventType="valueChanged" id="tGg-fn-cyL"/>
+                                        </connections>
+                                    </segmentedControl>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="9tF-A9-A6W" firstAttribute="top" secondItem="f1p-sS-nIW" secondAttribute="top" id="0B5-XZ-dPC"/>
-                                    <constraint firstItem="8op-8A-CbT" firstAttribute="height" secondItem="dbS-6W-Poj" secondAttribute="height" multiplier="0.4" id="3LX-sd-MA1"/>
+                                    <constraint firstItem="8op-8A-CbT" firstAttribute="height" secondItem="dbS-6W-Poj" secondAttribute="height" multiplier="0.7" id="3LX-sd-MA1"/>
+                                    <constraint firstItem="1tL-Uq-tXu" firstAttribute="centerX" secondItem="8op-8A-CbT" secondAttribute="centerX" id="Ceq-bl-AY2"/>
                                     <constraint firstItem="dbS-6W-Poj" firstAttribute="top" secondItem="9tF-A9-A6W" secondAttribute="bottom" id="XPr-qe-zkh"/>
                                     <constraint firstItem="9tF-A9-A6W" firstAttribute="leading" secondItem="f1p-sS-nIW" secondAttribute="leading" id="YcU-pv-SH7"/>
                                     <constraint firstAttribute="trailing" secondItem="9tF-A9-A6W" secondAttribute="trailing" id="ijK-Q5-kvQ"/>
@@ -96,6 +93,7 @@
                     <connections>
                         <outlet property="cityPickerView" destination="9tF-A9-A6W" id="dki-4h-6N6"/>
                         <outlet property="tableView" destination="dbS-6W-Poj" id="KfL-se-nz1"/>
+                        <outlet property="weatherScrollableView" destination="8op-8A-CbT" id="Fxh-F8-KW9"/>
                         <outlet property="weatherTypeSegmentedControl" destination="1tL-Uq-tXu" id="8Wj-tz-c2p"/>
                     </connections>
                 </viewController>

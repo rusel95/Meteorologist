@@ -8,9 +8,10 @@ target 'Meteorologist' do
   # Pods for Meteorologist
 	pod 'Alamofire'
    	pod 'AlamofireImage'
-    	pod 'ObjectMapper'
+    pod 'ObjectMapper'
    	pod 'R.swift'
    	pod 'SVProgressHUD'
+    pod 'ScrollableGraphView', '~> 4.0.0'
 end
 
 # ignore all warnings from all pods

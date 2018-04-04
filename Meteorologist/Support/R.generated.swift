@@ -130,7 +130,7 @@ struct _R {
     }
     
     struct main: Rswift.StoryboardResourceWithInitialControllerType {
-      typealias InitialController = UIKit.UINavigationController
+      typealias InitialController = MainVC
       
       let bundle = R.hostingBundle
       let name = "Main"

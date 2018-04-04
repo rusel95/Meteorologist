@@ -9,11 +9,11 @@
 import Foundation
 import ObjectMapper
 
-class WeatherItem: Mappable {
+class HourlyItem: Mappable {
     var time: Date!
     var summary: String!
     var icon: String!
-    var temperature: Double!  = 0 {
+    var temperature: Double! = 0 {
         didSet {
             temperature = temperature.toCelsius()
         }
@@ -42,11 +42,52 @@ class WeatherItem: Mappable {
     
 }
 
-class Weather: Mappable {
-    var currently: WeatherItem!
-    var hourly: [WeatherItem]!
-    var daily: [WeatherItem]!
+class DailyItem: Mappable {
+    var time: Date!
+    var summary: String!
+    var icon: String!
+    var humidity: Double!
+    var pressure: Double!
+    var windSpeed: Double!
+    var cloudCover: Double!
+    var visibility: Double!
+    var temperatureHigh: Double! = 0 {
+        didSet {
+            temperatureHigh = temperatureHigh.toCelsius()
+        }
+    }
+    var temperatureLow: Double! = 0 {
+        didSet {
+            temperatureLow = temperatureLow.toCelsius()
+        }
+    }
     required init?(map: Map) {
+        
+    }
+    
+    func mapping(map: Map) {
+        time <- (map["time"], DateTransform())
+        summary <- map["summary"]
+        icon <- map["icon"]
+        temperatureHigh <- map["temperatureHigh"]
+        temperatureLow <- map["temperatureLow"]
+        humidity <- map["humidity"]
+        pressure <- map["pressure"]
+        windSpeed <- map["windSpeed"]
+        cloudCover <- map["cloudCover"]
+        visibility <- map["visibility"]
+    }
+    
+}
+
+class Weather: Mappable {
+    var currently: HourlyItem!
+    var hourly: [HourlyItem] = []
+    var daily: [DailyItem] = []
+    required init?(map: Map) {
+        
+    }
+    init() {
         
     }
     func mapping(map: Map) {

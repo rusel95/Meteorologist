@@ -8,6 +8,11 @@
 
 import UIKit
 
+enum ItemType {
+    case hourly
+    case daily
+}
+
 class WeatherItemTVC: UITableViewCell {
 
     @IBOutlet weak var weatherImageView: UIImageView!
@@ -18,16 +23,25 @@ class WeatherItemTVC: UITableViewCell {
     @IBOutlet weak var pressureLabel: UILabel!
     @IBOutlet weak var windSpeed: UILabel!
     
-    var weatherItem: WeatherItem! {
-        didSet {
-            let dateFormatter = DateFormatter(withFormat: "MMM-dd", locale: "ua_UA")
-            dateLabel.text = dateFormatter.string(from: weatherItem.time)
-            summaryLabel.text = weatherItem.summary
-            humidityLabel.text = String(weatherItem.humidity)
-            temperatureLabel.text = String(weatherItem.temperature ?? 0.0)
-            pressureLabel.text = String(weatherItem.pressure)
-            windSpeed.text = String(weatherItem.windSpeed)
-        }
+    func initWith(hourlyItem: HourlyItem) {
+        summaryLabel.text? = hourlyItem.summary
+        humidityLabel.text? = "Humidity: \(hourlyItem.humidity)"
+        temperatureLabel.text = "Middle: \(hourlyItem.temperature)"
+        pressureLabel.text? = "Pressure: \(hourlyItem.pressure)"
+        windSpeed.text? = "Windspeed: \(hourlyItem.windSpeed)"
+        
+        let dateFormatter = DateFormatter(withFormat: "E HH:mm", locale: "ua_UA")
+        dateLabel.text = dateFormatter.string(from: hourlyItem.time)
+    }
+    
+    func initWith(dailyItem: DailyItem) {
+        summaryLabel.text? = dailyItem.summary
+        humidityLabel.text? = "Humidity: \(dailyItem.humidity)"
+        temperatureLabel.text = "Max: \(dailyItem.temperatureHigh) Min: \(dailyItem.temperatureLow)"
+        pressureLabel.text? = "Pressure: \(dailyItem.pressure)"
+        windSpeed.text? = "Windspeed: \(dailyItem.windSpeed)"
+        let dateFormatter = DateFormatter(withFormat: "MMM d", locale: "ua_UA")
+        dateLabel.text = dateFormatter.string(from: dailyItem.time)
     }
     
     override func awakeFromNib() {

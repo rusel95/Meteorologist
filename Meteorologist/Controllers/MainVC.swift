@@ -19,11 +19,17 @@ class MainVC: UIViewController {
     @IBOutlet weak var weatherChartView: LineChartView!
     
     @IBAction func weatherTypeChanged(_ sender: UISegmentedControl) {
-        if sender.selectedSegmentIndex == 0 {
-            weatherItems = weather.hourly
-        } else {
-            weatherItems = weather.daily
+        switch sender.selectedSegmentIndex {
+        case 0:
+            currentItemType = .hourly
+            setupChartWith(hourlyItems: weather.hourly)
+        case 1:
+            currentItemType = .daily
+            setupChartWith(dailyItems: weather.daily)
+        default:
+            break
         }
+        tableView.reloadData()
     }
     
     var cities: [City]! = [City.Dnipro, City.Dubai, City.Kanberra, City.Kiev, City.London, City.Lviv, City.NewYork, City.Odessa]
@@ -33,22 +39,16 @@ class MainVC: UIViewController {
         }
     }
     
-    var a = [3,4,2,4,6.2,5,2.6,34,6,4,2,1]
-    var weatherItems: [WeatherItem] = [] {
-        didSet {
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-                self.setupChart()
-            }
-        }
-    }
+    var currentItemType = ItemType.hourly
     
-    var weather: Weather! {
+    var weather: Weather! = Weather() {
         didSet {
-            if self.weatherTypeSegmentedControl.selectedSegmentIndex == 0 {
-                self.weatherItems = weather.hourly
-            } else {
-                self.weatherItems = weather.daily
+            tableView.reloadData()
+            switch currentItemType {
+            case .hourly:
+                self.setupChartWith(hourlyItems: weather.hourly)
+            case .daily:
+                self.setupChartWith(dailyItems: weather.daily)
             }
         }
     }
@@ -67,7 +67,7 @@ class MainVC: UIViewController {
     
     func getWeatherAt(city: City) {
         SVProgressHUD.show()
-        WeatherAPI.getWeatherFor(city: City.Dnipro) { [unowned self] (weather, error) in
+        WeatherAPI.getWeatherFor(city: city) { [unowned self] (weather, error) in
             if let weather = weather {
                 SVProgressHUD.dismiss()
                 self.weather = weather
@@ -77,47 +77,29 @@ class MainVC: UIViewController {
         }
     }
     
-    func setupChart() {
-        var lineChartEntry = [ChartDataEntry]()
-        for i in 0..<weatherItems.count {
-            let value = ChartDataEntry(x: Double(i), y: weatherItems[i].temperature)
-            lineChartEntry.append(value)
-        }
-        let line1 = LineChartDataSet(values: lineChartEntry, label: nil)
-        line1.colors = [UIColor.blue]
-        line1.drawCirclesEnabled = false
-        line1.mode = .cubicBezier
-        
-        let data = LineChartData()
-        data.addDataSet(line1)
-        
-        let xAxix = weatherChartView.xAxis
-        xAxix.drawGridLinesEnabled = false
-        xAxix.labelPosition = .bottom
-        
-        let leftYAxix = weatherChartView.getAxis(.left)
-        leftYAxix.drawGridLinesEnabled = false
-        
-        weatherChartView.data = data
-        weatherChartView.chartDescription?.text = "Weather Chart"
-        weatherChartView.setScaleEnabled(false)
-        weatherChartView.dragEnabled = false
-        weatherChartView.pinchZoomEnabled = false
-        weatherChartView.getAxis(.right).enabled = false
-    }
 
 
 }
 
 extension MainVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return weatherItems.count
+        switch currentItemType {
+        case .hourly:
+            return weather.hourly.count
+        case .daily:
+            return weather.daily.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.weatherItemTVC, for: indexPath)
-        cell?.weatherItem = weatherItems[indexPath.row]
-        return cell ?? UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.weatherItemTVC, for: indexPath)!
+        switch currentItemType {
+        case .hourly:
+            cell.initWith(hourlyItem: weather.hourly[indexPath.row])
+        case .daily:
+            cell.initWith(dailyItem: weather.daily[indexPath.row])
+        }
+        return cell
     }
 }
 
@@ -139,4 +121,3 @@ extension MainVC: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
 }
-

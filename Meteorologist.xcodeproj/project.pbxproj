@@ -13,6 +13,7 @@
 		74480606206FDE4D006D7406 /* WeatherItemTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74480604206FDE4D006D7406 /* WeatherItemTVC.swift */; };
 		74480607206FDE4D006D7406 /* WeatherItemTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74480605206FDE4D006D7406 /* WeatherItemTVC.xib */; };
 		74820AAC2074D48900210ED9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74820AAB2074D48900210ED9 /* Extensions.swift */; };
+		74820AAE2074F9A300210ED9 /* MyChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74820AAD2074F9A300210ED9 /* MyChart.swift */; };
 		74C01BFA206F73CF0061E8ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C01BF9206F73CF0061E8ED /* AppDelegate.swift */; };
 		74C01BFC206F73CF0061E8ED /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C01BFB206F73CF0061E8ED /* MainVC.swift */; };
 		74C01BFF206F73CF0061E8ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74C01BFD206F73CF0061E8ED /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 		74480604206FDE4D006D7406 /* WeatherItemTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherItemTVC.swift; sourceTree = "<group>"; };
 		74480605206FDE4D006D7406 /* WeatherItemTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherItemTVC.xib; sourceTree = "<group>"; };
 		74820AAB2074D48900210ED9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		74820AAD2074F9A300210ED9 /* MyChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChart.swift; sourceTree = "<group>"; };
 		74C01BF6206F73CF0061E8ED /* Meteorologist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meteorologist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74C01BF9206F73CF0061E8ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74C01BFB206F73CF0061E8ED /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				74C01BFB206F73CF0061E8ED /* MainVC.swift */,
+				74820AAD2074F9A300210ED9 /* MyChart.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				74C01BFC206F73CF0061E8ED /* MainVC.swift in Sources */,
 				74C01BFA206F73CF0061E8ED /* AppDelegate.swift in Sources */,
 				744805F9206FCD50006D7406 /* Weather.swift in Sources */,
+				74820AAE2074F9A300210ED9 /* MyChart.swift in Sources */,
 				74480606206FDE4D006D7406 /* WeatherItemTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

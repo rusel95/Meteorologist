@@ -13,7 +13,11 @@ class WeatherItem: Mappable {
     var time: Date!
     var summary: String!
     var icon: String!
-    var temperature: Double!
+    var temperature: Double!  = 0 {
+        didSet {
+            temperature = temperature.toCelsius()
+        }
+    }
     var humidity: Double!
     var pressure: Double!
     var windSpeed: Double!

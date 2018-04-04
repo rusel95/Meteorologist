@@ -12,6 +12,7 @@
 		744805FC206FCE09006D7406 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744805FB206FCE09006D7406 /* City.swift */; };
 		74480606206FDE4D006D7406 /* WeatherItemTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74480604206FDE4D006D7406 /* WeatherItemTVC.swift */; };
 		74480607206FDE4D006D7406 /* WeatherItemTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74480605206FDE4D006D7406 /* WeatherItemTVC.xib */; };
+		74820AAC2074D48900210ED9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74820AAB2074D48900210ED9 /* Extensions.swift */; };
 		74C01BFA206F73CF0061E8ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C01BF9206F73CF0061E8ED /* AppDelegate.swift */; };
 		74C01BFC206F73CF0061E8ED /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C01BFB206F73CF0061E8ED /* MainVC.swift */; };
 		74C01BFF206F73CF0061E8ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74C01BFD206F73CF0061E8ED /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 		744805FB206FCE09006D7406 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		74480604206FDE4D006D7406 /* WeatherItemTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherItemTVC.swift; sourceTree = "<group>"; };
 		74480605206FDE4D006D7406 /* WeatherItemTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherItemTVC.xib; sourceTree = "<group>"; };
+		74820AAB2074D48900210ED9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		74C01BF6206F73CF0061E8ED /* Meteorologist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meteorologist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74C01BF9206F73CF0061E8ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74C01BFB206F73CF0061E8ED /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				74E61FF22070058900B4FBB6 /* R.generated.swift */,
+				74820AAB2074D48900210ED9 /* Extensions.swift */,
 				74C01C03206F73CF0061E8ED /* Assets.xcassets */,
 				74C01C05206F73CF0061E8ED /* LaunchScreen.storyboard */,
 				74C01C08206F73CF0061E8ED /* Info.plist */,
@@ -269,19 +272,19 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Meteorologist/Pods-Meteorologist-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/ScrollableGraphView/ScrollableGraphView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ScrollableGraphView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -296,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				744805FC206FCE09006D7406 /* City.swift in Sources */,
+				74820AAC2074D48900210ED9 /* Extensions.swift in Sources */,
 				74C01C02206F73CF0061E8ED /* Meteorologist.xcdatamodeld in Sources */,
 				74C01C0F206F779A0061E8ED /* WeatherAPI.swift in Sources */,
 				74E61FF32070058900B4FBB6 /* R.generated.swift in Sources */,

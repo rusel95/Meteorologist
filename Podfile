@@ -11,7 +11,7 @@ target 'Meteorologist' do
     pod 'ObjectMapper'
    	pod 'R.swift'
    	pod 'SVProgressHUD'
-    pod 'ScrollableGraphView', '~> 4.0.0'
+    pod 'Charts', '~> 3.1'
 end
 
 # ignore all warnings from all pods

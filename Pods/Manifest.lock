@@ -2,30 +2,32 @@ PODS:
   - Alamofire (4.6.0)
   - AlamofireImage (3.3.0):
     - Alamofire (~> 4.5)
+  - Charts (3.1.0):
+    - Charts/Core (= 3.1.0)
+  - Charts/Core (3.1.0)
   - ObjectMapper (3.1.0)
   - R.swift (4.0.0):
     - R.swift.Library (~> 4.0.0)
   - R.swift.Library (4.0.0)
-  - ScrollableGraphView (4.0.4)
   - SVProgressHUD (2.2.2)
 
 DEPENDENCIES:
   - Alamofire
   - AlamofireImage
+  - Charts (~> 3.1)
   - ObjectMapper
   - R.swift
-  - ScrollableGraphView (~> 4.0.0)
   - SVProgressHUD
 
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   AlamofireImage: 2e784dc5d00f04903a52c1d169181469c805c3df
+  Charts: 0b0c96f6118b6ce63f11adbcaa3b31045ee4d772
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
   R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
   R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
-  ScrollableGraphView: 072ea302f4ca27779692656a49d51fe537b2b1e7
   SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
 
-PODFILE CHECKSUM: 4cd944f53442b5385ee4a55802995c7cce41e139
+PODFILE CHECKSUM: 91efb7e4d6e104a89b4e319443da8a3ca4455cdb
 
 COCOAPODS: 1.4.0

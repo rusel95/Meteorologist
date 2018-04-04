@@ -20,7 +20,7 @@ class WeatherItemTVC: UITableViewCell {
     
     var weatherItem: WeatherItem! {
         didSet {
-            let dateFormatter = DateFormatter(withFormat: "yyyy-MM-dd", locale: "ua_UA")
+            let dateFormatter = DateFormatter(withFormat: "MMM-dd", locale: "ua_UA")
             dateLabel.text = dateFormatter.string(from: weatherItem.time)
             summaryLabel.text = weatherItem.summary
             humidityLabel.text = String(weatherItem.humidity)

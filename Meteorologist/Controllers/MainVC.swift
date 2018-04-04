@@ -8,7 +8,7 @@
 
 import UIKit
 import SVProgressHUD
-import ScrollableGraphView
+import Charts
 
 
 class MainVC: UIViewController {
@@ -16,7 +16,7 @@ class MainVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var cityPickerView: UIPickerView!
     @IBOutlet weak var weatherTypeSegmentedControl: UISegmentedControl!
-    @IBOutlet weak var weatherScrollableView: ScrollableGraphView!
+    @IBOutlet weak var weatherChartView: LineChartView!
     
     @IBAction func weatherTypeChanged(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
@@ -26,17 +26,19 @@ class MainVC: UIViewController {
         }
     }
     
-    var cities: [City]! = [City.Dnipro, City.Dubai, City.Kanberra, City.Kiev]
+    var cities: [City]! = [City.Dnipro, City.Dubai, City.Kanberra, City.Kiev, City.London, City.Lviv, City.NewYork, City.Odessa]
     var choosedCity: City! = City.Dnipro {
         didSet {
             getWeatherAt(city: choosedCity)
         }
     }
     
-    var weatherItems: [WeatherItem]? {
+    var a = [3,4,2,4,6.2,5,2.6,34,6,4,2,1]
+    var weatherItems: [WeatherItem] = [] {
         didSet {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
+                self.setupChart()
             }
         }
     }
@@ -59,7 +61,6 @@ class MainVC: UIViewController {
         tableView.register(R.nib.weatherItemTVC)
         cityPickerView.delegate = self
         cityPickerView.dataSource = self
-        weatherScrollableView.dataSource = self
         
         getWeatherAt(city: choosedCity)
     }
@@ -76,7 +77,33 @@ class MainVC: UIViewController {
         }
     }
     
-    func setupScrollableGraph() {
+    func setupChart() {
+        var lineChartEntry = [ChartDataEntry]()
+        for i in 0..<weatherItems.count {
+            let value = ChartDataEntry(x: Double(i), y: weatherItems[i].temperature)
+            lineChartEntry.append(value)
+        }
+        let line1 = LineChartDataSet(values: lineChartEntry, label: nil)
+        line1.colors = [UIColor.blue]
+        line1.drawCirclesEnabled = false
+        line1.mode = .cubicBezier
+        
+        let data = LineChartData()
+        data.addDataSet(line1)
+        
+        let xAxix = weatherChartView.xAxis
+        xAxix.drawGridLinesEnabled = false
+        xAxix.labelPosition = .bottom
+        
+        let leftYAxix = weatherChartView.getAxis(.left)
+        leftYAxix.drawGridLinesEnabled = false
+        
+        weatherChartView.data = data
+        weatherChartView.chartDescription?.text = "Weather Chart"
+        weatherChartView.setScaleEnabled(false)
+        weatherChartView.dragEnabled = false
+        weatherChartView.pinchZoomEnabled = false
+        weatherChartView.getAxis(.right).enabled = false
     }
 
 
@@ -84,12 +111,12 @@ class MainVC: UIViewController {
 
 extension MainVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return weatherItems?.count ?? 0
+        return weatherItems.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.weatherItemTVC, for: indexPath)
-        cell?.weatherItem = weatherItems?[indexPath.row]
+        cell?.weatherItem = weatherItems[indexPath.row]
         return cell ?? UITableViewCell()
     }
 }
@@ -110,27 +137,6 @@ extension MainVC: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         choosedCity = cities[row]
     }
-    
-}
-
-extension MainVC: ScrollableGraphViewDataSource {
-    func value(forPlot plot: Plot, atIndex pointIndex: Int) -> Double {
-        switch(plot.identifier) {
-        case "line":
-            return linePlotData[pointIndex]
-        default:
-            return 0
-        }
-    }
-    
-    func label(atIndex pointIndex: Int) -> String {
-        <#code#>
-    }
-    
-    func numberOfPoints() -> Int {
-        <#code#>
-    }
-    
     
 }
 

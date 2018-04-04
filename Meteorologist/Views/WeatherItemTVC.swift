@@ -24,22 +24,22 @@ class WeatherItemTVC: UITableViewCell {
     @IBOutlet weak var windSpeed: UILabel!
     
     func initWith(hourlyItem: HourlyItem) {
-        summaryLabel.text? = hourlyItem.summary
-        humidityLabel.text? = "Humidity: \(hourlyItem.humidity)"
-        temperatureLabel.text = "Middle: \(hourlyItem.temperature)"
-        pressureLabel.text? = "Pressure: \(hourlyItem.pressure)"
-        windSpeed.text? = "Windspeed: \(hourlyItem.windSpeed)"
+        summaryLabel.text = hourlyItem.summary
+        humidityLabel.text = "Humidity: \(hourlyItem.humidity ?? 0)"
+        temperatureLabel.text = "Middle: \(hourlyItem.temperature.rounded(toPlaces: 2) )"
+        pressureLabel.text = "Pressure: \(hourlyItem.pressure ?? 0)"
+        windSpeed.text = "Windspeed: \(hourlyItem.windSpeed ?? 0)"
         
         let dateFormatter = DateFormatter(withFormat: "E HH:mm", locale: "ua_UA")
         dateLabel.text = dateFormatter.string(from: hourlyItem.time)
     }
     
     func initWith(dailyItem: DailyItem) {
-        summaryLabel.text? = dailyItem.summary
-        humidityLabel.text? = "Humidity: \(dailyItem.humidity)"
-        temperatureLabel.text = "Max: \(dailyItem.temperatureHigh) Min: \(dailyItem.temperatureLow)"
-        pressureLabel.text? = "Pressure: \(dailyItem.pressure)"
-        windSpeed.text? = "Windspeed: \(dailyItem.windSpeed)"
+        summaryLabel.text = dailyItem.summary
+        humidityLabel.text = "Humidity: \(dailyItem.humidity ?? 0)"
+        temperatureLabel.text = "Max: \(dailyItem.temperatureHigh.rounded(toPlaces: 2) ) Min: \(dailyItem.temperatureLow.rounded(toPlaces: 2) )"
+        pressureLabel.text = "Pressure: \(dailyItem.pressure ?? 0)"
+        windSpeed.text = "Windspeed: \(dailyItem.windSpeed ?? 0)"
         let dateFormatter = DateFormatter(withFormat: "MMM d", locale: "ua_UA")
         dateLabel.text = dateFormatter.string(from: dailyItem.time)
     }

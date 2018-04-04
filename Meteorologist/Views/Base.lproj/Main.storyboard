@@ -23,20 +23,20 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="f1p-sS-nIW">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <rect key="frame" x="8" y="0.0" width="359" height="619"/>
                                 <subviews>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9tF-A9-A6W">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="F7e-uu-IvB"/>
                                         </constraints>
                                     </pickerView>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dbS-6W-Poj">
-                                        <rect key="frame" x="0.0" y="103" width="375" height="285"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dbS-6W-Poj">
+                                        <rect key="frame" x="0.0" y="103" width="359" height="282.5"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8op-8A-CbT" customClass="LineChartView" customModule="Charts">
-                                        <rect key="frame" x="0.0" y="391" width="375" height="199"/>
+                                        <rect key="frame" x="0.0" y="388.5" width="359" height="197.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="backgroundFillColor">
@@ -45,7 +45,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" momentary="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1tL-Uq-tXu">
-                                        <rect key="frame" x="0.0" y="593" width="375" height="31"/>
+                                        <rect key="frame" x="0.0" y="589" width="359" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Hqg-qD-HJu"/>
                                         </constraints>
@@ -71,14 +71,14 @@
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="JHU-on-se0" firstAttribute="trailing" secondItem="f1p-sS-nIW" secondAttribute="trailing" id="2F3-jG-qTc"/>
-                            <constraint firstAttribute="bottom" secondItem="JHU-on-se0" secondAttribute="bottom" id="9c1-Mc-kZG"/>
-                            <constraint firstItem="JHU-on-se0" firstAttribute="leading" secondItem="f1p-sS-nIW" secondAttribute="leading" id="Tk1-uM-fmI"/>
+                            <constraint firstItem="JHU-on-se0" firstAttribute="leading" secondItem="fNG-Hc-gMb" secondAttribute="leading" id="0G5-uU-uVJ"/>
                             <constraint firstItem="f1p-sS-nIW" firstAttribute="top" secondItem="Pd1-q2-JBs" secondAttribute="top" constant="-20" id="Y4A-I4-Xgx"/>
-                            <constraint firstItem="JHU-on-se0" firstAttribute="top" secondItem="f1p-sS-nIW" secondAttribute="top" id="ceQ-0h-lPh"/>
-                            <constraint firstItem="f1p-sS-nIW" firstAttribute="leading" secondItem="Pd1-q2-JBs" secondAttribute="leading" id="e8n-O7-aVA"/>
-                            <constraint firstItem="Pd1-q2-JBs" firstAttribute="trailing" secondItem="f1p-sS-nIW" secondAttribute="trailing" id="lTS-uJ-6gS"/>
-                            <constraint firstItem="Pd1-q2-JBs" firstAttribute="bottom" secondItem="f1p-sS-nIW" secondAttribute="bottom" id="sTc-IV-39b"/>
+                            <constraint firstAttribute="bottom" secondItem="JHU-on-se0" secondAttribute="bottom" id="dxq-Yf-UsQ"/>
+                            <constraint firstItem="f1p-sS-nIW" firstAttribute="leading" secondItem="Pd1-q2-JBs" secondAttribute="leading" constant="8" id="e8n-O7-aVA"/>
+                            <constraint firstItem="Pd1-q2-JBs" firstAttribute="trailing" secondItem="f1p-sS-nIW" secondAttribute="trailing" constant="8" id="lTS-uJ-6gS"/>
+                            <constraint firstItem="JHU-on-se0" firstAttribute="centerX" secondItem="f1p-sS-nIW" secondAttribute="centerX" id="nez-8C-mnQ"/>
+                            <constraint firstItem="JHU-on-se0" firstAttribute="top" secondItem="f1p-sS-nIW" secondAttribute="top" id="pTN-gB-nQf"/>
+                            <constraint firstItem="Pd1-q2-JBs" firstAttribute="bottom" secondItem="f1p-sS-nIW" secondAttribute="bottom" constant="4" id="sTc-IV-39b"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Pd1-q2-JBs"/>
                     </view>

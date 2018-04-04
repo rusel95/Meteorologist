@@ -125,10 +125,15 @@ struct R: Rswift.Validatable {
 struct _R: Rswift.Validatable {
   static func validate() throws {
     try storyboard.validate()
+    try nib.validate()
   }
   
-  struct nib {
-    struct _WeatherItemTVC: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
+  struct nib: Rswift.Validatable {
+    static func validate() throws {
+      try _WeatherItemTVC.validate()
+    }
+    
+    struct _WeatherItemTVC: Rswift.NibResourceType, Rswift.ReuseIdentifierType, Rswift.Validatable {
       typealias ReusableType = WeatherItemTVC
       
       let bundle = R.hostingBundle
@@ -137,6 +142,10 @@ struct _R: Rswift.Validatable {
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> WeatherItemTVC? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? WeatherItemTVC
+      }
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "01-s", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named '01-s' is used in nib 'WeatherItemTVC', but couldn't be loaded.") }
       }
       
       fileprivate init() {}

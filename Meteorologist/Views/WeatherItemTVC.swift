@@ -24,9 +24,10 @@ class WeatherItemTVC: UITableViewCell {
     @IBOutlet weak var windSpeed: UILabel!
     
     func initWith(hourlyItem: HourlyItem) {
+        //weatherImageView.image = R.image.launch1()!
         summaryLabel.text = hourlyItem.summary
         humidityLabel.text = "Humidity: \(hourlyItem.humidity ?? 0)"
-        temperatureLabel.text = "Middle: \(hourlyItem.temperature.rounded(toPlaces: 2) )"
+        temperatureLabel.text = "Middle: \(hourlyItem.temperature.rounded(toPlaces: 2))°C"
         pressureLabel.text = "Pressure: \(hourlyItem.pressure ?? 0)"
         windSpeed.text = "Windspeed: \(hourlyItem.windSpeed ?? 0)"
         
@@ -37,7 +38,7 @@ class WeatherItemTVC: UITableViewCell {
     func initWith(dailyItem: DailyItem) {
         summaryLabel.text = dailyItem.summary
         humidityLabel.text = "Humidity: \(dailyItem.humidity ?? 0)"
-        temperatureLabel.text = "Max: \(dailyItem.temperatureHigh.rounded(toPlaces: 2) ) Min: \(dailyItem.temperatureLow.rounded(toPlaces: 2) )"
+        temperatureLabel.text = "Max: \(dailyItem.temperatureHigh.rounded(toPlaces: 2) )°C  Min: \(dailyItem.temperatureLow.rounded(toPlaces: 2) )°C"
         pressureLabel.text = "Pressure: \(dailyItem.pressure ?? 0)"
         windSpeed.text = "Windspeed: \(dailyItem.windSpeed ?? 0)"
         let dateFormatter = DateFormatter(withFormat: "MMM d", locale: "ua_UA")
@@ -46,7 +47,7 @@ class WeatherItemTVC: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        self.backgroundColor = UIColor.clear
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -19,12 +19,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch3" translatesAutoresizingMaskIntoConstraints="NO" id="JHU-on-se0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="f1p-sS-nIW">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                                 <subviews>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9tF-A9-A6W">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="F7e-uu-IvB"/>
                                         </constraints>
@@ -36,7 +38,7 @@
                                     </tableView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8op-8A-CbT" customClass="LineChartView" customModule="Charts">
                                         <rect key="frame" x="0.0" y="391" width="375" height="199"/>
-                                        <color key="backgroundColor" red="0.0039215686269999999" green="0.75294117650000003" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="backgroundFillColor">
                                                 <color key="value" red="0.0039215686269999999" green="0.75294117650000003" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -45,7 +47,6 @@
                                     </view>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" momentary="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1tL-Uq-tXu">
                                         <rect key="frame" x="0.0" y="593" width="375" height="31"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Hqg-qD-HJu"/>
                                         </constraints>
@@ -71,7 +72,11 @@
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="JHU-on-se0" firstAttribute="trailing" secondItem="f1p-sS-nIW" secondAttribute="trailing" id="2F3-jG-qTc"/>
+                            <constraint firstAttribute="bottom" secondItem="JHU-on-se0" secondAttribute="bottom" id="9c1-Mc-kZG"/>
+                            <constraint firstItem="JHU-on-se0" firstAttribute="leading" secondItem="f1p-sS-nIW" secondAttribute="leading" id="Tk1-uM-fmI"/>
                             <constraint firstItem="f1p-sS-nIW" firstAttribute="top" secondItem="Pd1-q2-JBs" secondAttribute="top" constant="-20" id="Y4A-I4-Xgx"/>
+                            <constraint firstItem="JHU-on-se0" firstAttribute="top" secondItem="f1p-sS-nIW" secondAttribute="top" id="ceQ-0h-lPh"/>
                             <constraint firstItem="f1p-sS-nIW" firstAttribute="leading" secondItem="Pd1-q2-JBs" secondAttribute="leading" id="e8n-O7-aVA"/>
                             <constraint firstItem="Pd1-q2-JBs" firstAttribute="trailing" secondItem="f1p-sS-nIW" secondAttribute="trailing" id="lTS-uJ-6gS"/>
                             <constraint firstItem="Pd1-q2-JBs" firstAttribute="bottom" secondItem="f1p-sS-nIW" secondAttribute="bottom" id="sTc-IV-39b"/>
@@ -92,4 +97,7 @@
             <point key="canvasLocation" x="-410.39999999999998" y="108.39580209895054"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="launch3" width="640" height="1136"/>
+    </resources>
 </document>

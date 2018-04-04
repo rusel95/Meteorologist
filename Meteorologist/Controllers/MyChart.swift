@@ -68,5 +68,10 @@ extension MainVC {
         weatherChartView.getAxis(.right).enabled = false
         weatherChartView.backgroundColor = UIColor.white
     }
+}
 
+extension MainVC: ChartViewDelegate {
+    func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
+        tableView.scrollToRow(at: IndexPath(row: Int(entry.x), section: 0), at: .middle, animated: true)
+    }
 }

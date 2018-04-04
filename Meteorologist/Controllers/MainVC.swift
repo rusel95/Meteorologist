@@ -55,13 +55,12 @@ class MainVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(R.nib.weatherItemTVC)
         cityPickerView.delegate = self
         cityPickerView.dataSource = self
-        
+        weatherChartView.delegate = self
         getWeatherAt(city: choosedCity)
     }
     
@@ -76,9 +75,6 @@ class MainVC: UIViewController {
             }
         }
     }
-    
-
-
 }
 
 extension MainVC: UITableViewDelegate, UITableViewDataSource {

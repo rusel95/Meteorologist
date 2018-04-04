@@ -8,11 +8,6 @@
 
 import UIKit
 
-enum ItemType {
-    case hourly
-    case daily
-}
-
 class WeatherItemTVC: UITableViewCell {
 
     @IBOutlet weak var weatherImageView: UIImageView!

@@ -32,16 +32,16 @@ class MainVC: UIViewController {
         tableView.reloadData()
     }
     
-    var cities: [City]! = [City.Dnipro, City.Dubai, City.Kanberra, City.Kiev, City.London, City.Lviv, City.NewYork, City.Odessa]
-    var choosedCity: City! = City.Dnipro {
+    private var cities: [City]! = [City.Dnipro, City.Dubai, City.Kanberra, City.Kiev, City.London, City.Lviv, City.NewYork, City.Odessa]
+    private var choosedCity: City! = City.Dnipro {
         didSet {
             getWeatherAt(city: choosedCity)
         }
     }
     
-    var currentItemType = ItemType.hourly
+    private var currentItemType = WeatherItemType.hourly
     
-    var weather: Weather! = Weather() {
+    private var weather: Weather! = Weather() {
         didSet {
             tableView.reloadData()
             switch currentItemType {
@@ -64,7 +64,7 @@ class MainVC: UIViewController {
         getWeatherAt(city: choosedCity)
     }
     
-    func getWeatherAt(city: City) {
+    private func getWeatherAt(city: City) {
         SVProgressHUD.show()
         WeatherAPI.getWeatherFor(city: city) { [unowned self] (weather, error) in
             if let weather = weather {
@@ -116,4 +116,70 @@ extension MainVC: UIPickerViewDelegate, UIPickerViewDataSource {
         choosedCity = cities[row]
     }
     
+}
+
+extension MainVC {
+    fileprivate func setupChartWith(hourlyItems: [HourlyItem]) {
+        var lineChartEntry = [ChartDataEntry]()
+        for i in 0..<hourlyItems.count {
+            let value = ChartDataEntry(x: Double(i), y: hourlyItems[i].temperature)
+            lineChartEntry.append(value)
+        }
+        let line1 = LineChartDataSet(values: lineChartEntry, label: "Middle temperature")
+        line1.colors = [UIColor.green]
+        line1.drawCirclesEnabled = false
+        line1.mode = .cubicBezier
+        
+        let data = LineChartData()
+        data.addDataSet(line1)
+        
+        setVisualisationOptionsWith(data: data)
+    }
+    
+    func setupChartWith(dailyItems: [DailyItem]) {
+        var lineChartEntryHigh = [ChartDataEntry]()
+        var lineChartEntryLow = [ChartDataEntry]()
+        for i in 0..<dailyItems.count {
+            lineChartEntryLow.append(ChartDataEntry(x: Double(i), y: dailyItems[i].temperatureLow))
+            lineChartEntryHigh.append(ChartDataEntry(x: Double(i), y: dailyItems[i].temperatureHigh))
+        }
+        let lineHigh = LineChartDataSet(values: lineChartEntryHigh, label: "Highest")
+        lineHigh.colors = [UIColor.red]
+        lineHigh.drawCirclesEnabled = false
+        lineHigh.mode = .cubicBezier
+        
+        let lineLow = LineChartDataSet(values: lineChartEntryLow, label: "Lowest")
+        lineLow.colors = [UIColor.blue]
+        lineLow.drawCirclesEnabled = false
+        lineLow.mode = .cubicBezier
+        
+        let data = LineChartData()
+        data.addDataSet(lineHigh)
+        data.addDataSet(lineLow)
+        
+        setVisualisationOptionsWith(data: data)
+    }
+    
+    private func setVisualisationOptionsWith(data: ChartData) {
+        let xAxix = weatherChartView.xAxis
+        xAxix.drawGridLinesEnabled = false
+        xAxix.labelPosition = .bottom
+        
+        let leftYAxix = weatherChartView.getAxis(.left)
+        leftYAxix.drawGridLinesEnabled = false
+        
+        weatherChartView.data = data
+        weatherChartView.chartDescription?.text = "Weather Chart"
+        weatherChartView.setScaleEnabled(false)
+        weatherChartView.dragEnabled = false
+        weatherChartView.pinchZoomEnabled = false
+        weatherChartView.getAxis(.right).enabled = false
+        weatherChartView.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.7)
+    }
+}
+
+extension MainVC: ChartViewDelegate {
+    func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
+        tableView.scrollToRow(at: IndexPath(row: Int(entry.x), section: 0), at: .middle, animated: true)
+    }
 }

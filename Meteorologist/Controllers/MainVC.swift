@@ -91,9 +91,9 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.weatherItemTVC, for: indexPath)!
         switch currentItemType {
         case .hourly:
-            cell.initWith(hourlyItem: weather.hourly[indexPath.row])
+            cell.initWith(weatherItem: weather.hourly[indexPath.row])
         case .daily:
-            cell.initWith(dailyItem: weather.daily[indexPath.row])
+            cell.initWith(weatherItem: weather.daily[indexPath.row])
         }
         return cell
     }

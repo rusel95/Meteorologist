@@ -5,6 +5,7 @@ PODS:
   - Charts (3.1.0):
     - Charts/Core (= 3.1.0)
   - Charts/Core (3.1.0)
+  - EventsTree (1.0.0)
   - ObjectMapper (3.1.0)
   - R.swift (4.0.0):
     - R.swift.Library (~> 4.0.0)
@@ -15,6 +16,7 @@ DEPENDENCIES:
   - Alamofire
   - AlamofireImage
   - Charts (~> 3.1)
+  - EventsTree
   - ObjectMapper
   - R.swift
   - SVProgressHUD
@@ -23,11 +25,12 @@ SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   AlamofireImage: 2e784dc5d00f04903a52c1d169181469c805c3df
   Charts: 0b0c96f6118b6ce63f11adbcaa3b31045ee4d772
+  EventsTree: 137f90ebbfd9f3aa57040f4da972583d6196f0d0
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
   R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
   R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
   SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
 
-PODFILE CHECKSUM: 91efb7e4d6e104a89b4e319443da8a3ca4455cdb
+PODFILE CHECKSUM: 3a7bd80f6e346f632851fdcd795131681fac6666
 
 COCOAPODS: 1.4.0

@@ -10,5 +10,5 @@ import Foundation
 
 enum WeatherItemType {
     case hourly
-    case daily
+    case daily    
 }

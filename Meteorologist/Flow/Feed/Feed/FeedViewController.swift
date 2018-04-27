@@ -11,7 +11,7 @@ import SVProgressHUD
 import Charts
 
 
-class MainVC: UIViewController {
+class FeedViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var cityPickerView: UIPickerView!
@@ -77,7 +77,7 @@ class MainVC: UIViewController {
     }
 }
 
-extension MainVC: UITableViewDelegate, UITableViewDataSource {
+extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch currentItemType {
         case .hourly:
@@ -99,7 +99,7 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-extension MainVC: UIPickerViewDelegate, UIPickerViewDataSource {
+extension FeedViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -118,7 +118,7 @@ extension MainVC: UIPickerViewDelegate, UIPickerViewDataSource {
     
 }
 
-extension MainVC {
+extension FeedViewController {
     fileprivate func setupChartWith(hourlyItems: [HourlyItem]) {
         var lineChartEntry = [ChartDataEntry]()
         for i in 0..<hourlyItems.count {
@@ -178,7 +178,7 @@ extension MainVC {
     }
 }
 
-extension MainVC: ChartViewDelegate {
+extension FeedViewController: ChartViewDelegate {
     func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
         tableView.scrollToRow(at: IndexPath(row: Int(entry.x), section: 0), at: .middle, animated: true)
     }

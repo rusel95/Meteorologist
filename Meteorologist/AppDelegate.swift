@@ -14,13 +14,22 @@ import SVProgressHUD
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    private var appNavigationCoordinator: AppNavigation!
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        Initializer.setupSVProgressHUD()
+        appNavigationCoordinator = AppNavigation(window: window!)
+        appNavigationCoordinator.startFlow()
         
         return true
     }
 
 }
 
+//static func setupSVProgressHUD() {
+//    SVProgressHUD.setDefaultStyle(.light)
+//    SVProgressHUD.setBackgroundColor(UIColor.white.withAlphaComponent(0.7))
+//    SVProgressHUD.setForegroundColor(UIColor.lightGray)
+//    SVProgressHUD.setMinimumDismissTimeInterval(1.5)
+//    SVProgressHUD.setMaximumDismissTimeInterval(3.0)
+//}

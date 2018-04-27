@@ -14,7 +14,7 @@ class TabBarCoordinator: EventNode, Coordinator {
     private weak var root: TabBarController!
     
     func createFlow() -> UIViewController {
-        let tabBarController = StoryboardScene.Tabbar.instantiateTabBarController()
+        let tabBarController = R.storyboard.tabBar.tabbarVC()!
         let model = TabBarModel(parent: self)
         tabBarController.model = model
         model.output = tabBarController

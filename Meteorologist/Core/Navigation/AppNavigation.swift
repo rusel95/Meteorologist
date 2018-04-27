@@ -42,8 +42,8 @@ final class AppNavigation: EventNode {
 extension AppNavigation {
     
     fileprivate func presentLoginFlow() {
-        let configuration = AuthFlowConfiguration(parent: self, userSessionController: userSessionController)
-        let coordinator = AuthFlowCoordinator(configuration: configuration)
+        let configuration = LoginFlowConfiguration(parent: self, userSessionController: userSessionController)
+        let coordinator = LoginFlowCoordinator(configuration: configuration)
         presentCoordinatorFlow(coordinator)
     }
     

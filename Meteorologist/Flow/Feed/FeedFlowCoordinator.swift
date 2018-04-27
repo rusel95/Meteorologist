@@ -14,7 +14,7 @@ class FeedFlowCoordinator: EventNode, TabBarEmbedCoordinable {
     
     let tabItemInfo = TabBarItemInfo(
         title: tr(key: .feedTabbarTitle),
-        icon: UIImage(asset: .feedIcon),
+        icon: R.image.feed_icon()!,
         highlightedIcon: nil
     )
     
@@ -39,7 +39,7 @@ class FeedFlowCoordinator: EventNode, TabBarEmbedCoordinable {
     }
     
     func createFlow() -> UIViewController {
-        root = StoryboardScene.Feed.instantiateFeedViewController()
+        root = R.storyboard.feed.feedVC()!
         let model = FeedModel(parent: self)
         root.model = model
         model.output = root

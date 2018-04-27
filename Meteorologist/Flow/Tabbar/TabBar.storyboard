@@ -12,7 +12,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="vVa-7F-wMF">
             <objects>
-                <tabBarController id="J5H-n3-bKK" customClass="TabBarController" customModule="Meteorologist" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabbarVC" id="J5H-n3-bKK" customClass="TabBarController" customModule="Meteorologist" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ehu-VE-na0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

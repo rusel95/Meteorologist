@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4410424A20937533004C0F10 /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4410424920937533004C0F10 /* FeedModel.swift */; };
+		4410424F2093770C004C0F10 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4410424D2093770C004C0F10 /* SettingsTableViewCell.swift */; };
+		441042502093770C004C0F10 /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4410424E2093770C004C0F10 /* SettingsTableViewCell.xib */; };
 		447C5E6520935D0F003A2A17 /* FeedFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447C5E6420935D0F003A2A17 /* FeedFlowCoordinator.swift */; };
 		447C5E6920935D87003A2A17 /* AppNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447C5E6820935D87003A2A17 /* AppNavigation.swift */; };
 		447C5E7120935FA1003A2A17 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447C5E7020935FA1003A2A17 /* Coordinator.swift */; };
@@ -18,14 +21,18 @@
 		447C5E832093647E003A2A17 /* UserSessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447C5E822093647D003A2A17 /* UserSessionController.swift */; };
 		447C5E85209364B2003A2A17 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447C5E84209364B2003A2A17 /* UserSession.swift */; };
 		447C5E8720936B55003A2A17 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447C5E8620936B55003A2A17 /* LoginModel.swift */; };
-		447C5E8920936C64003A2A17 /* AuthFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447C5E8820936C64003A2A17 /* AuthFlowCoordinator.swift */; };
-		447C5E8B20936C8A003A2A17 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447C5E8A20936C8A003A2A17 /* AuthViewController.swift */; };
-		447C5E8D20936CA5003A2A17 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 447C5E8C20936CA5003A2A17 /* Auth.storyboard */; };
+		447C5E8920936C64003A2A17 /* LoginFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447C5E8820936C64003A2A17 /* LoginFlowCoordinator.swift */; };
+		447C5E8B20936C8A003A2A17 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447C5E8A20936C8A003A2A17 /* LoginViewController.swift */; };
+		447C5E8D20936CA5003A2A17 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 447C5E8C20936CA5003A2A17 /* Login.storyboard */; };
 		447C5E8F20936D2C003A2A17 /* l10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447C5E8E20936D2C003A2A17 /* l10n.swift */; };
 		447C5E9320936E0B003A2A17 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447C5E9220936E0B003A2A17 /* TabBarController.swift */; };
 		447C5E9520936E38003A2A17 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447C5E9420936E38003A2A17 /* TabBarCoordinator.swift */; };
 		447C5E9720936E73003A2A17 /* TabBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447C5E9620936E73003A2A17 /* TabBarModel.swift */; };
 		447C5E9920936E89003A2A17 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 447C5E9820936E89003A2A17 /* TabBar.storyboard */; };
+		447C5E9B20936FCD003A2A17 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 447C5E9A20936FCD003A2A17 /* Settings.storyboard */; };
+		447C5E9D20937019003A2A17 /* SettingsFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447C5E9C20937019003A2A17 /* SettingsFlowCoordinator.swift */; };
+		447C5E9F20937136003A2A17 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447C5E9E20937136003A2A17 /* SettingsModel.swift */; };
+		447C5EA120937181003A2A17 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447C5EA020937181003A2A17 /* SettingsViewController.swift */; };
 		6ACD76850E41F59B5CF44078 /* Pods_Meteorologist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3ED3FB832EA84EF18F0B6D /* Pods_Meteorologist.framework */; };
 		740109C920752456009085B3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740109C820752456009085B3 /* Constants.swift */; };
 		744805F9206FCD50006D7406 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744805F8206FCD50006D7406 /* Weather.swift */; };
@@ -44,6 +51,9 @@
 
 /* Begin PBXFileReference section */
 		0B3DBF3C3774B77AE3B4FE0C /* Pods-Meteorologist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meteorologist.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Meteorologist/Pods-Meteorologist.debug.xcconfig"; sourceTree = "<group>"; };
+		4410424920937533004C0F10 /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
+		4410424D2093770C004C0F10 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		4410424E2093770C004C0F10 /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
 		447C5E6420935D0F003A2A17 /* FeedFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFlowCoordinator.swift; sourceTree = "<group>"; };
 		447C5E6820935D87003A2A17 /* AppNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigation.swift; sourceTree = "<group>"; };
 		447C5E7020935FA1003A2A17 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -55,14 +65,18 @@
 		447C5E822093647D003A2A17 /* UserSessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionController.swift; sourceTree = "<group>"; };
 		447C5E84209364B2003A2A17 /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
 		447C5E8620936B55003A2A17 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
-		447C5E8820936C64003A2A17 /* AuthFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFlowCoordinator.swift; sourceTree = "<group>"; };
-		447C5E8A20936C8A003A2A17 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
-		447C5E8C20936CA5003A2A17 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		447C5E8820936C64003A2A17 /* LoginFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFlowCoordinator.swift; sourceTree = "<group>"; };
+		447C5E8A20936C8A003A2A17 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		447C5E8C20936CA5003A2A17 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		447C5E8E20936D2C003A2A17 /* l10n.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = l10n.swift; sourceTree = "<group>"; };
 		447C5E9220936E0B003A2A17 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		447C5E9420936E38003A2A17 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		447C5E9620936E73003A2A17 /* TabBarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarModel.swift; sourceTree = "<group>"; };
 		447C5E9820936E89003A2A17 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		447C5E9A20936FCD003A2A17 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		447C5E9C20937019003A2A17 /* SettingsFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsFlowCoordinator.swift; sourceTree = "<group>"; };
+		447C5E9E20937136003A2A17 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
+		447C5EA020937181003A2A17 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		58DF880D2DD69AB1BDF84E7C /* Pods-Meteorologist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meteorologist.release.xcconfig"; path = "Pods/Target Support Files/Pods-Meteorologist/Pods-Meteorologist.release.xcconfig"; sourceTree = "<group>"; };
 		740109C820752456009085B3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		744805F8206FCD50006D7406 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
@@ -94,6 +108,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4410425120937712004C0F10 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4410424D2093770C004C0F10 /* SettingsTableViewCell.swift */,
+				4410424E2093770C004C0F10 /* SettingsTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		447C5E5A20935A0C003A2A17 /* External */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,10 +168,10 @@
 		447C5E6020935C04003A2A17 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				447C5E8C20936CA5003A2A17 /* Auth.storyboard */,
+				447C5E8C20936CA5003A2A17 /* Login.storyboard */,
 				447C5E8620936B55003A2A17 /* LoginModel.swift */,
-				447C5E8820936C64003A2A17 /* AuthFlowCoordinator.swift */,
-				447C5E8A20936C8A003A2A17 /* AuthViewController.swift */,
+				447C5E8820936C64003A2A17 /* LoginFlowCoordinator.swift */,
+				447C5E8A20936C8A003A2A17 /* LoginViewController.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -156,9 +179,9 @@
 		447C5E6120935C13003A2A17 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				447C5E6220935CC6003A2A17 /* Feed */,
 				74C01BFD206F73CF0061E8ED /* Feed.storyboard */,
 				447C5E6420935D0F003A2A17 /* FeedFlowCoordinator.swift */,
-				447C5E6220935CC6003A2A17 /* Feed */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -167,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				447C5E6320935CDC003A2A17 /* Cell */,
+				4410424920937533004C0F10 /* FeedModel.swift */,
 				74C01BFB206F73CF0061E8ED /* FeedViewController.swift */,
 			);
 			path = Feed;
@@ -304,6 +328,11 @@
 		447C5E9020936D71003A2A17 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				4410425120937712004C0F10 /* Cell */,
+				447C5E9A20936FCD003A2A17 /* Settings.storyboard */,
+				447C5E9C20937019003A2A17 /* SettingsFlowCoordinator.swift */,
+				447C5E9E20937136003A2A17 /* SettingsModel.swift */,
+				447C5EA020937181003A2A17 /* SettingsViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -442,10 +471,12 @@
 			files = (
 				74C01C07206F73CF0061E8ED /* LaunchScreen.storyboard in Resources */,
 				74480607206FDE4D006D7406 /* WeatherItemTVC.xib in Resources */,
-				447C5E8D20936CA5003A2A17 /* Auth.storyboard in Resources */,
+				447C5E8D20936CA5003A2A17 /* Login.storyboard in Resources */,
 				74C01C04206F73CF0061E8ED /* Assets.xcassets in Resources */,
 				447C5E9920936E89003A2A17 /* TabBar.storyboard in Resources */,
 				74C01BFF206F73CF0061E8ED /* Feed.storyboard in Resources */,
+				441042502093770C004C0F10 /* SettingsTableViewCell.xib in Resources */,
+				447C5E9B20936FCD003A2A17 /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,17 +574,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				447C5E8B20936C8A003A2A17 /* AuthViewController.swift in Sources */,
+				447C5E8B20936C8A003A2A17 /* LoginViewController.swift in Sources */,
 				447C5E7B20936062003A2A17 /* TabBarEmbedCoordinate.swift in Sources */,
 				447C5E762093600F003A2A17 /* SpinnerPresenting.swift in Sources */,
+				4410424F2093770C004C0F10 /* SettingsTableViewCell.swift in Sources */,
 				447C5E9520936E38003A2A17 /* TabBarCoordinator.swift in Sources */,
 				744805FC206FCE09006D7406 /* City.swift in Sources */,
+				447C5E9D20937019003A2A17 /* SettingsFlowCoordinator.swift in Sources */,
 				74820AAC2074D48900210ED9 /* Double.swift in Sources */,
+				4410424A20937533004C0F10 /* FeedModel.swift in Sources */,
 				447C5E7120935FA1003A2A17 /* Coordinator.swift in Sources */,
 				447C5E8720936B55003A2A17 /* LoginModel.swift in Sources */,
 				447C5E7820936026003A2A17 /* StatusPresenting.swift in Sources */,
 				447C5E9720936E73003A2A17 /* TabBarModel.swift in Sources */,
 				74C01C0F206F779A0061E8ED /* WeatherAPI.swift in Sources */,
+				447C5E9F20937136003A2A17 /* SettingsModel.swift in Sources */,
 				447C5E9320936E0B003A2A17 /* TabBarController.swift in Sources */,
 				447C5E6920935D87003A2A17 /* AppNavigation.swift in Sources */,
 				740109C920752456009085B3 /* Constants.swift in Sources */,
@@ -562,8 +597,9 @@
 				74E61FF32070058900B4FBB6 /* R.generated.swift in Sources */,
 				447C5E7320935FD6003A2A17 /* Model.swift in Sources */,
 				447C5E8F20936D2C003A2A17 /* l10n.swift in Sources */,
-				447C5E8920936C64003A2A17 /* AuthFlowCoordinator.swift in Sources */,
+				447C5E8920936C64003A2A17 /* LoginFlowCoordinator.swift in Sources */,
 				74C01BFC206F73CF0061E8ED /* FeedViewController.swift in Sources */,
+				447C5EA120937181003A2A17 /* SettingsViewController.swift in Sources */,
 				74C01BFA206F73CF0061E8ED /* AppDelegate.swift in Sources */,
 				447C5E812093645F003A2A17 /* UserSessionInfo.swift in Sources */,
 				744805F9206FCD50006D7406 /* Weather.swift in Sources */,

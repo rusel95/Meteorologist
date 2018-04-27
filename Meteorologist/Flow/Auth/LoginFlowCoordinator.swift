@@ -8,18 +8,16 @@
 
 import Foundation
 
-struct AuthFlowConfiguration {
-    
+struct LoginFlowConfiguration {
     let parent: EventNode
     let userSessionController: UserSessionController
-    
 }
 
-class AuthFlowCoordinator: EventNode, Coordinator {
+class LoginFlowCoordinator: EventNode, Coordinator {
     
     private unowned let userSessionController: UserSessionController
     
-    init(configuration: AuthFlowConfiguration) {
+    init(configuration: LoginFlowConfiguration) {
         userSessionController = configuration.userSessionController
         
         super.init(parent: configuration.parent)

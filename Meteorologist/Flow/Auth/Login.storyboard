@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZOt-6M-MLo">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="Lhv-zd-Fzm">
+            <objects>
+                <viewController storyboardIdentifier="authVC" id="ZOt-6M-MLo" customClass="LoginViewController" customModule="Meteorologist" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ua7-sf-XbY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vs-Ol-YiQ">
+                                <rect key="frame" x="168.5" y="328.5" width="38" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="login:" destination="ZOt-6M-MLo" eventType="touchUpInside" id="ZVm-9C-7mt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6vs-Ol-YiQ" firstAttribute="centerX" secondItem="2Ym-Cp-GAi" secondAttribute="centerX" id="6At-Rv-t0E"/>
+                            <constraint firstItem="6vs-Ol-YiQ" firstAttribute="centerY" secondItem="2Ym-Cp-GAi" secondAttribute="centerY" id="Vj5-EA-Ocl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2Ym-Cp-GAi"/>
+                    </view>
+                    <connections>
+                        <outlet property="loginButton" destination="6vs-Ol-YiQ" id="0rc-nU-Rk3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LBI-Aa-dZm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-130.40000000000001" y="168.6656671664168"/>
+        </scene>
+    </scenes>
+</document>

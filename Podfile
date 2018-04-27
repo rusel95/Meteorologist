@@ -8,7 +8,7 @@ target 'Meteorologist' do
   # Pods for Meteorologist
 	pod 'Alamofire'
    	pod 'AlamofireImage'
-    	pod 'ObjectMapper'
+    pod 'ObjectMapper'
    	pod 'R.swift'
     pod 'Charts', '~> 3.1'
 	pod 'EventsTree'
@@ -19,8 +19,8 @@ target 'Meteorologist' do
     
     # Network
     pod 'APIClient'
-    pod 'OAuthSwift', '~> 1.0'
-    pod 'DBClient/CoreData', :git => 'https://git.yalantis.com/ios/DBClient.git'
+    #pod 'OAuthSwift', '~> 1.0'
+    #pod 'DBClient/CoreData', :git => 'https://git.yalantis.com/ios/DBClient.git'
 
 end
 

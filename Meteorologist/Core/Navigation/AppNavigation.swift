@@ -12,7 +12,7 @@ import EventsTree
 
 final class AppNavigation: EventNode {
     
-    fileprivate let userSessionController = UserSessionController(storage: UserDefaults.standard)
+    //fileprivate let userSessionController = UserSessionController(storage: UserDefaults.standard)
     fileprivate unowned let window: UIWindow
     
     init(window: UIWindow) {

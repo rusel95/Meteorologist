@@ -2,7 +2,7 @@
 //  SVProgressAnimatedView.m
 //  SVProgressHUD, https://github.com/SVProgressHUD/SVProgressHUD
 //
-//  Copyright (c) 2017 Tobias Tiemerding. All rights reserved.
+//  Copyright (c) 2016 Tobias Tiemerding. All rights reserved.
 //
 
 #import "SVProgressAnimatedView.h"
@@ -59,6 +59,7 @@
             [self layoutAnimatedLayer];
         }
     }
+    
 }
 
 - (void)setRadius:(CGFloat)radius {
@@ -88,6 +89,7 @@
     _strokeEnd = strokeEnd;
     _ringAnimatedLayer.strokeEnd = _strokeEnd;
 }
+
 
 - (CGSize)sizeThatFits:(CGSize)size {
     return CGSizeMake((self.radius+self.strokeThickness/2+5)*2, (self.radius+self.strokeThickness/2+5)*2);

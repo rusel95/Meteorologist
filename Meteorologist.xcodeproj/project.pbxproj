@@ -17,6 +17,15 @@
 		447C5E812093645F003A2A17 /* UserSessionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447C5E802093645F003A2A17 /* UserSessionInfo.swift */; };
 		447C5E832093647E003A2A17 /* UserSessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447C5E822093647D003A2A17 /* UserSessionController.swift */; };
 		447C5E85209364B2003A2A17 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447C5E84209364B2003A2A17 /* UserSession.swift */; };
+		447C5E8720936B55003A2A17 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447C5E8620936B55003A2A17 /* LoginModel.swift */; };
+		447C5E8920936C64003A2A17 /* AuthFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447C5E8820936C64003A2A17 /* AuthFlowCoordinator.swift */; };
+		447C5E8B20936C8A003A2A17 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447C5E8A20936C8A003A2A17 /* AuthViewController.swift */; };
+		447C5E8D20936CA5003A2A17 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 447C5E8C20936CA5003A2A17 /* Auth.storyboard */; };
+		447C5E8F20936D2C003A2A17 /* l10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447C5E8E20936D2C003A2A17 /* l10n.swift */; };
+		447C5E9320936E0B003A2A17 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447C5E9220936E0B003A2A17 /* TabBarController.swift */; };
+		447C5E9520936E38003A2A17 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447C5E9420936E38003A2A17 /* TabBarCoordinator.swift */; };
+		447C5E9720936E73003A2A17 /* TabBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447C5E9620936E73003A2A17 /* TabBarModel.swift */; };
+		447C5E9920936E89003A2A17 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 447C5E9820936E89003A2A17 /* TabBar.storyboard */; };
 		6ACD76850E41F59B5CF44078 /* Pods_Meteorologist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3ED3FB832EA84EF18F0B6D /* Pods_Meteorologist.framework */; };
 		740109C920752456009085B3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740109C820752456009085B3 /* Constants.swift */; };
 		744805F9206FCD50006D7406 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744805F8206FCD50006D7406 /* Weather.swift */; };
@@ -45,6 +54,15 @@
 		447C5E802093645F003A2A17 /* UserSessionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionInfo.swift; sourceTree = "<group>"; };
 		447C5E822093647D003A2A17 /* UserSessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionController.swift; sourceTree = "<group>"; };
 		447C5E84209364B2003A2A17 /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
+		447C5E8620936B55003A2A17 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		447C5E8820936C64003A2A17 /* AuthFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFlowCoordinator.swift; sourceTree = "<group>"; };
+		447C5E8A20936C8A003A2A17 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		447C5E8C20936CA5003A2A17 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		447C5E8E20936D2C003A2A17 /* l10n.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = l10n.swift; sourceTree = "<group>"; };
+		447C5E9220936E0B003A2A17 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		447C5E9420936E38003A2A17 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		447C5E9620936E73003A2A17 /* TabBarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarModel.swift; sourceTree = "<group>"; };
+		447C5E9820936E89003A2A17 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		58DF880D2DD69AB1BDF84E7C /* Pods-Meteorologist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meteorologist.release.xcconfig"; path = "Pods/Target Support Files/Pods-Meteorologist/Pods-Meteorologist.release.xcconfig"; sourceTree = "<group>"; };
 		740109C820752456009085B3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		744805F8206FCD50006D7406 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
@@ -90,6 +108,8 @@
 			children = (
 				447C5E6020935C04003A2A17 /* Auth */,
 				447C5E6120935C13003A2A17 /* Feed */,
+				447C5E9020936D71003A2A17 /* Settings */,
+				447C5E9120936DAE003A2A17 /* Tabbar */,
 			);
 			path = Flow;
 			sourceTree = "<group>";
@@ -125,6 +145,10 @@
 		447C5E6020935C04003A2A17 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				447C5E8C20936CA5003A2A17 /* Auth.storyboard */,
+				447C5E8620936B55003A2A17 /* LoginModel.swift */,
+				447C5E8820936C64003A2A17 /* AuthFlowCoordinator.swift */,
+				447C5E8A20936C8A003A2A17 /* AuthViewController.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -246,6 +270,7 @@
 			children = (
 				447C5E6C20935E50003A2A17 /* Foundation */,
 				74E61FF22070058900B4FBB6 /* R.generated.swift */,
+				447C5E8E20936D2C003A2A17 /* l10n.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -274,6 +299,24 @@
 				447C5E84209364B2003A2A17 /* UserSession.swift */,
 			);
 			path = UserSession;
+			sourceTree = "<group>";
+		};
+		447C5E9020936D71003A2A17 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		447C5E9120936DAE003A2A17 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				447C5E9820936E89003A2A17 /* TabBar.storyboard */,
+				447C5E9220936E0B003A2A17 /* TabBarController.swift */,
+				447C5E9420936E38003A2A17 /* TabBarCoordinator.swift */,
+				447C5E9620936E73003A2A17 /* TabBarModel.swift */,
+			);
+			path = Tabbar;
 			sourceTree = "<group>";
 		};
 		65AED70A3BE88ED408CA4079 /* Pods */ = {
@@ -399,7 +442,9 @@
 			files = (
 				74C01C07206F73CF0061E8ED /* LaunchScreen.storyboard in Resources */,
 				74480607206FDE4D006D7406 /* WeatherItemTVC.xib in Resources */,
+				447C5E8D20936CA5003A2A17 /* Auth.storyboard in Resources */,
 				74C01C04206F73CF0061E8ED /* Assets.xcassets in Resources */,
+				447C5E9920936E89003A2A17 /* TabBar.storyboard in Resources */,
 				74C01BFF206F73CF0061E8ED /* Feed.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,23 +505,31 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Meteorologist/Pods-Meteorologist-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/APIClient/APIClient.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/DCKeyValueObjectMapping/DCKeyValueObjectMapping.framework",
 				"${BUILT_PRODUCTS_DIR}/EventsTree/EventsTree.framework",
+				"${BUILT_PRODUCTS_DIR}/InflectorKit/InflectorKit.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/APIClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DCKeyValueObjectMapping.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EventsTree.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InflectorKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPKeyboardAvoiding.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -490,19 +543,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				447C5E8B20936C8A003A2A17 /* AuthViewController.swift in Sources */,
 				447C5E7B20936062003A2A17 /* TabBarEmbedCoordinate.swift in Sources */,
 				447C5E762093600F003A2A17 /* SpinnerPresenting.swift in Sources */,
+				447C5E9520936E38003A2A17 /* TabBarCoordinator.swift in Sources */,
 				744805FC206FCE09006D7406 /* City.swift in Sources */,
 				74820AAC2074D48900210ED9 /* Double.swift in Sources */,
 				447C5E7120935FA1003A2A17 /* Coordinator.swift in Sources */,
+				447C5E8720936B55003A2A17 /* LoginModel.swift in Sources */,
 				447C5E7820936026003A2A17 /* StatusPresenting.swift in Sources */,
+				447C5E9720936E73003A2A17 /* TabBarModel.swift in Sources */,
 				74C01C0F206F779A0061E8ED /* WeatherAPI.swift in Sources */,
+				447C5E9320936E0B003A2A17 /* TabBarController.swift in Sources */,
 				447C5E6920935D87003A2A17 /* AppNavigation.swift in Sources */,
 				740109C920752456009085B3 /* Constants.swift in Sources */,
 				447C5E832093647E003A2A17 /* UserSessionController.swift in Sources */,
 				447C5E85209364B2003A2A17 /* UserSession.swift in Sources */,
 				74E61FF32070058900B4FBB6 /* R.generated.swift in Sources */,
 				447C5E7320935FD6003A2A17 /* Model.swift in Sources */,
+				447C5E8F20936D2C003A2A17 /* l10n.swift in Sources */,
+				447C5E8920936C64003A2A17 /* AuthFlowCoordinator.swift in Sources */,
 				74C01BFC206F73CF0061E8ED /* FeedViewController.swift in Sources */,
 				74C01BFA206F73CF0061E8ED /* AppDelegate.swift in Sources */,
 				447C5E812093645F003A2A17 /* UserSessionInfo.swift in Sources */,

@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import EventsTree
+import SVProgressHUD
 
 final class AppNavigation: EventNode {
     
@@ -17,23 +18,29 @@ final class AppNavigation: EventNode {
     
     init(window: UIWindow) {
         self.window = window
-        
         super.init(parent: nil)
         
         addHandler { [weak self] (event: LoginEvent) in
-            if case .successfulLogin(let userSession) = event {
-                self?.presentMainFlow(with: userSession)
+            if case .successfulLogin() = event {
+                self?.presentMainFlow()
             }
         }
-        
+        setupSVProgressHUD()
+    }
+    
+    func setupSVProgressHUD() {
+        SVProgressHUD.setDefaultStyle(.light)
+        SVProgressHUD.setBackgroundColor(UIColor.white.withAlphaComponent(0.7))
+        SVProgressHUD.setForegroundColor(UIColor.lightGray)
+        SVProgressHUD.setMinimumDismissTimeInterval(1.5)
     }
     
     func startFlow() {
-        if let session = userSessionController.restorePreviousSession() {
-            presentMainFlow(with: session)
-        } else {
+        //if let session = userSessionController.restorePreviousSession() {
+        //    presentMainFlow(with: session)
+        //} else {
             presentLoginFlow()
-        }
+        //}
     }
 }
 
@@ -42,12 +49,12 @@ final class AppNavigation: EventNode {
 extension AppNavigation {
     
     fileprivate func presentLoginFlow() {
-        let configuration = LoginFlowConfiguration(parent: self, userSessionController: userSessionController)
+        let configuration = LoginFlowConfiguration(parent: self)
         let coordinator = LoginFlowCoordinator(configuration: configuration)
         presentCoordinatorFlow(coordinator)
     }
     
-    fileprivate func presentMainFlow(with: UserSession) {
+    fileprivate func presentMainFlow() {
         let coordinator = TabBarCoordinator(parent: self)
         let feedFlow = FeedFlowCoordinator(parent: coordinator)
         let settingsFlow = SettingsFlowCoordinator(parent: coordinator)

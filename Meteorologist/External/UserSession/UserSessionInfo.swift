@@ -8,16 +8,16 @@
 
 import Foundation
 
-class UserSessionInfo {
-    
-    let identifier: String
-    var accessToken: String
-    var user: User
-    
-    init(user: User, accessToken: String) {
-        self.user = user
-        self.identifier = String(user.id)
-        self.accessToken = accessToken
-    }
-    
-}
+//class UserSessionInfo {
+//    
+//    let identifier: String
+//    var accessToken: String
+//    var user: User
+//    
+//    init(user: User, accessToken: String) {
+//        self.user = user
+//        self.identifier = String(user.id)
+//        self.accessToken = accessToken
+//    }
+//    
+//}

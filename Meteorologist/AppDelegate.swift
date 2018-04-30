@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        window = UIWindow(frame: UIScreen.main.bounds)
         appNavigationCoordinator = AppNavigation(window: window!)
         appNavigationCoordinator.startFlow()
         
@@ -26,10 +27,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
-//static func setupSVProgressHUD() {
-//    SVProgressHUD.setDefaultStyle(.light)
-//    SVProgressHUD.setBackgroundColor(UIColor.white.withAlphaComponent(0.7))
-//    SVProgressHUD.setForegroundColor(UIColor.lightGray)
-//    SVProgressHUD.setMinimumDismissTimeInterval(1.5)
-//    SVProgressHUD.setMaximumDismissTimeInterval(3.0)
-//}
+

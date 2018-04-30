@@ -42,4 +42,24 @@ class LoginViewController: UIViewController {
     
 }
 
-extension LoginViewController: LoginViewControllerInput {}
+extension LoginViewController: LoginViewControllerInput {
+    func presentError(message: String) {
+        
+    }
+    
+    func presentSuccess(message: String) {
+        
+    }
+    
+    func presentStatus(message: String) {
+        
+    }
+    
+    func showSpinner(message: String?, blockUI: Bool) {
+        
+    }
+    
+    func hideSpinner() {
+        
+    }
+}

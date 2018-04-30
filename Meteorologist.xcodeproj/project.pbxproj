@@ -10,6 +10,7 @@
 		4410424A20937533004C0F10 /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4410424920937533004C0F10 /* FeedModel.swift */; };
 		4410424F2093770C004C0F10 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4410424D2093770C004C0F10 /* SettingsTableViewCell.swift */; };
 		441042502093770C004C0F10 /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4410424E2093770C004C0F10 /* SettingsTableViewCell.xib */; };
+		4410425320937F01004C0F10 /* ModelOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4410425220937F01004C0F10 /* ModelOutput.swift */; };
 		447C5E6520935D0F003A2A17 /* FeedFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447C5E6420935D0F003A2A17 /* FeedFlowCoordinator.swift */; };
 		447C5E6920935D87003A2A17 /* AppNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447C5E6820935D87003A2A17 /* AppNavigation.swift */; };
 		447C5E7120935FA1003A2A17 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447C5E7020935FA1003A2A17 /* Coordinator.swift */; };
@@ -24,7 +25,7 @@
 		447C5E8920936C64003A2A17 /* LoginFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447C5E8820936C64003A2A17 /* LoginFlowCoordinator.swift */; };
 		447C5E8B20936C8A003A2A17 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447C5E8A20936C8A003A2A17 /* LoginViewController.swift */; };
 		447C5E8D20936CA5003A2A17 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 447C5E8C20936CA5003A2A17 /* Login.storyboard */; };
-		447C5E8F20936D2C003A2A17 /* l10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447C5E8E20936D2C003A2A17 /* l10n.swift */; };
+		447C5E8F20936D2C003A2A17 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447C5E8E20936D2C003A2A17 /* L10n.swift */; };
 		447C5E9320936E0B003A2A17 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447C5E9220936E0B003A2A17 /* TabBarController.swift */; };
 		447C5E9520936E38003A2A17 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447C5E9420936E38003A2A17 /* TabBarCoordinator.swift */; };
 		447C5E9720936E73003A2A17 /* TabBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447C5E9620936E73003A2A17 /* TabBarModel.swift */; };
@@ -54,6 +55,7 @@
 		4410424920937533004C0F10 /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
 		4410424D2093770C004C0F10 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		4410424E2093770C004C0F10 /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
+		4410425220937F01004C0F10 /* ModelOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelOutput.swift; sourceTree = "<group>"; };
 		447C5E6420935D0F003A2A17 /* FeedFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFlowCoordinator.swift; sourceTree = "<group>"; };
 		447C5E6820935D87003A2A17 /* AppNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigation.swift; sourceTree = "<group>"; };
 		447C5E7020935FA1003A2A17 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -68,7 +70,7 @@
 		447C5E8820936C64003A2A17 /* LoginFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFlowCoordinator.swift; sourceTree = "<group>"; };
 		447C5E8A20936C8A003A2A17 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		447C5E8C20936CA5003A2A17 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
-		447C5E8E20936D2C003A2A17 /* l10n.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = l10n.swift; sourceTree = "<group>"; };
+		447C5E8E20936D2C003A2A17 /* L10n.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
 		447C5E9220936E0B003A2A17 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		447C5E9420936E38003A2A17 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		447C5E9620936E73003A2A17 /* TabBarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarModel.swift; sourceTree = "<group>"; };
@@ -168,10 +170,10 @@
 		447C5E6020935C04003A2A17 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				447C5E8C20936CA5003A2A17 /* Login.storyboard */,
 				447C5E8620936B55003A2A17 /* LoginModel.swift */,
-				447C5E8820936C64003A2A17 /* LoginFlowCoordinator.swift */,
 				447C5E8A20936C8A003A2A17 /* LoginViewController.swift */,
+				447C5E8C20936CA5003A2A17 /* Login.storyboard */,
+				447C5E8820936C64003A2A17 /* LoginFlowCoordinator.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -268,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				447C5E7220935FD6003A2A17 /* Model.swift */,
+				4410425220937F01004C0F10 /* ModelOutput.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -294,7 +297,7 @@
 			children = (
 				447C5E6C20935E50003A2A17 /* Foundation */,
 				74E61FF22070058900B4FBB6 /* R.generated.swift */,
-				447C5E8E20936D2C003A2A17 /* l10n.swift */,
+				447C5E8E20936D2C003A2A17 /* L10n.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -329,10 +332,10 @@
 			isa = PBXGroup;
 			children = (
 				4410425120937712004C0F10 /* Cell */,
-				447C5E9A20936FCD003A2A17 /* Settings.storyboard */,
-				447C5E9C20937019003A2A17 /* SettingsFlowCoordinator.swift */,
 				447C5E9E20937136003A2A17 /* SettingsModel.swift */,
 				447C5EA020937181003A2A17 /* SettingsViewController.swift */,
+				447C5E9A20936FCD003A2A17 /* Settings.storyboard */,
+				447C5E9C20937019003A2A17 /* SettingsFlowCoordinator.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -340,10 +343,10 @@
 		447C5E9120936DAE003A2A17 /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
-				447C5E9820936E89003A2A17 /* TabBar.storyboard */,
-				447C5E9220936E0B003A2A17 /* TabBarController.swift */,
-				447C5E9420936E38003A2A17 /* TabBarCoordinator.swift */,
 				447C5E9620936E73003A2A17 /* TabBarModel.swift */,
+				447C5E9220936E0B003A2A17 /* TabBarController.swift */,
+				447C5E9820936E89003A2A17 /* TabBar.storyboard */,
+				447C5E9420936E38003A2A17 /* TabBarCoordinator.swift */,
 			);
 			path = Tabbar;
 			sourceTree = "<group>";
@@ -588,6 +591,7 @@
 				447C5E7820936026003A2A17 /* StatusPresenting.swift in Sources */,
 				447C5E9720936E73003A2A17 /* TabBarModel.swift in Sources */,
 				74C01C0F206F779A0061E8ED /* WeatherAPI.swift in Sources */,
+				4410425320937F01004C0F10 /* ModelOutput.swift in Sources */,
 				447C5E9F20937136003A2A17 /* SettingsModel.swift in Sources */,
 				447C5E9320936E0B003A2A17 /* TabBarController.swift in Sources */,
 				447C5E6920935D87003A2A17 /* AppNavigation.swift in Sources */,
@@ -596,7 +600,7 @@
 				447C5E85209364B2003A2A17 /* UserSession.swift in Sources */,
 				74E61FF32070058900B4FBB6 /* R.generated.swift in Sources */,
 				447C5E7320935FD6003A2A17 /* Model.swift in Sources */,
-				447C5E8F20936D2C003A2A17 /* l10n.swift in Sources */,
+				447C5E8F20936D2C003A2A17 /* L10n.swift in Sources */,
 				447C5E8920936C64003A2A17 /* LoginFlowCoordinator.swift in Sources */,
 				74C01BFC206F73CF0061E8ED /* FeedViewController.swift in Sources */,
 				447C5EA120937181003A2A17 /* SettingsViewController.swift in Sources */,
@@ -748,7 +752,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46V7933WWZ;
-				INFOPLIST_FILE = Meteorologist/Support/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Meteorologist/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rusel95.Meteorologist;
@@ -765,7 +769,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46V7933WWZ;
-				INFOPLIST_FILE = Meteorologist/Support/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Meteorologist/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rusel95.Meteorologist;

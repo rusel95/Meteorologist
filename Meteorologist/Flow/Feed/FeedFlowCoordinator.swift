@@ -22,20 +22,7 @@ class FeedFlowCoordinator: EventNode, TabBarEmbedCoordinable {
     
     override init(parent: EventNode?) {
         super.init(parent: parent)
-        
-        addHandler([.onRaise, .consumeEvent]) { [weak self] (event: FeedEvent) in
-            if case .repositorySelected(let repository) = event {
-                self?.presentDetailedRepository(repository)
-            }
-        }
-        
-        addHandler { [weak self] (event: RepositoryDetailsEvent) in
-            guard let `self` = self, case .transitionToRepositoriesAccepted = event else {
-                return
-            }
-            
-            self.root.navigationController!.popViewController(animated: true)
-        }
+    
     }
     
     func createFlow() -> UIViewController {
@@ -45,18 +32,6 @@ class FeedFlowCoordinator: EventNode, TabBarEmbedCoordinable {
         model.output = root
         
         return UINavigationController(rootViewController: root)
-    }
-    
-}
-
-extension FeedFlowCoordinator {
-    
-    fileprivate func presentDetailedRepository(_ repository: Repository) {
-        let controller = StoryboardScene.Feed.instantiateRepositoryDetails()
-        let model = RepositoryDetailsModel(parent: self, repository: repository)
-        controller.model = model
-        model.output = controller
-        root.navigationController!.pushViewController(controller, animated: true)
     }
     
 }

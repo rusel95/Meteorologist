@@ -10,6 +10,8 @@ import UIKit
 import SVProgressHUD
 import Charts
 
+protocol FeedViewControllerOutput: FeedModelInput {}
+protocol FeedViewControllerInput: FeedModelOutput {}
 
 class FeedViewController: UIViewController {
 
@@ -19,82 +21,30 @@ class FeedViewController: UIViewController {
     @IBOutlet weak var weatherChartView: LineChartView!
     
     @IBAction func weatherTypeChanged(_ sender: UISegmentedControl) {
-        switch sender.selectedSegmentIndex {
-        case 0:
-            currentItemType = .hourly
-            setupChartWith(hourlyItems: weather.hourly)
-        case 1:
-            currentItemType = .daily
-            setupChartWith(dailyItems: weather.daily)
-        default:
-            break
-        }
+        model.changeWeatherType(to: sender.selectedSegmentIndex)
         tableView.reloadData()
     }
     
-    private var cities: [City]! = [City.Dnipro, City.Dubai, City.Kanberra, City.Kiev, City.London, City.Lviv, City.NewYork, City.Odessa]
-    private var choosedCity: City! = City.Dnipro {
-        didSet {
-            getWeatherAt(city: choosedCity)
-        }
-    }
-    
-    private var currentItemType = WeatherItemType.hourly
-    
-    private var weather: Weather! = Weather() {
-        didSet {
-            tableView.reloadData()
-            switch currentItemType {
-            case .hourly:
-                self.setupChartWith(hourlyItems: weather.hourly)
-            case .daily:
-                self.setupChartWith(dailyItems: weather.daily)
-            }
-        }
-    }
+    var model: FeedViewControllerOutput!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(R.nib.weatherItemTVC)
         cityPickerView.delegate = self
         cityPickerView.dataSource = self
         weatherChartView.delegate = self
-        getWeatherAt(city: choosedCity)
-    }
-    
-    private func getWeatherAt(city: City) {
-        SVProgressHUD.show()
-        WeatherAPI.getWeatherFor(city: city) { [unowned self] (weather, error) in
-            if let weather = weather {
-                SVProgressHUD.dismiss()
-                self.weather = weather
-            } else if let error = error {
-                SVProgressHUD.show(withStatus: error)
-            }
-        }
     }
 }
 
 extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch currentItemType {
-        case .hourly:
-            return weather.hourly.count
-        case .daily:
-            return weather.daily.count
-        }
+        return model.getNumberOfRows()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.weatherItemTVC, for: indexPath)!
-        switch currentItemType {
-        case .hourly:
-            cell.initWith(weatherItem: weather.hourly[indexPath.row])
-        case .daily:
-            cell.initWith(weatherItem: weather.daily[indexPath.row])
-        }
+        cell.initWith(weatherItem: model.feedSectionData(at: indexPath.row))
         return cell
     }
 }
@@ -105,21 +55,34 @@ extension FeedViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return cities.count
+        return model.getNumberOfCities()
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return String( cities[row].name )
+        return model.getCityNameAt(row: row)
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        choosedCity = cities[row]
+        model.setChoosedCityTo(row: row)
     }
-    
 }
 
-extension FeedViewController {
-    fileprivate func setupChartWith(hourlyItems: [HourlyItem]) {
+extension FeedViewController: FeedViewControllerInput {
+    func didStartActivity(_ activity: FeedModel.Activity) {
+        SVProgressHUD.show()
+    }
+    
+    func didFinishActivity(_ activity: FeedModel.Activity) {
+        SVProgressHUD.dismiss {
+            self.tableView.reloadData()
+        }
+    }
+    
+    func didFinishActivity(_ activity: FeedModel.Activity, with error: String) {
+        SVProgressHUD.showError(withStatus: error)
+    }
+    
+    internal func setupChartWith(hourlyItems: [HourlyItem]) {
         var lineChartEntry = [ChartDataEntry]()
         for i in 0..<hourlyItems.count {
             let value = ChartDataEntry(x: Double(i), y: hourlyItems[i].temperature)
@@ -159,6 +122,11 @@ extension FeedViewController {
         
         setVisualisationOptionsWith(data: data)
     }
+    
+}
+
+extension FeedViewController {
+    
     
     private func setVisualisationOptionsWith(data: ChartData) {
         let xAxix = weatherChartView.xAxis

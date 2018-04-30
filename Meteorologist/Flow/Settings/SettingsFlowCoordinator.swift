@@ -33,14 +33,9 @@ class SettingsFlowCoordinator: EventNode, TabBarEmbedCoordinable {
         super.init(parent: parent)
         
         addHandler { [weak self] (event: SettingsEvent) in
-            guard let `self` = self else {
-                return
-            }
+            guard let `self` = self else { return }
             
             switch event {
-            case .profileSelected:
-                self.presentProfileFlow()
-                
             case .privacyPolicySelected:
                 self.presentPrivacyPolicy()
                 
@@ -49,12 +44,6 @@ class SettingsFlowCoordinator: EventNode, TabBarEmbedCoordinable {
             }
         }
         
-    }
-    
-    private func presentProfileFlow() {
-        let coordinator = ProfileFlowCoordinator(parent: self)
-        let root = coordinator.createFlow()
-        navigationController.pushViewController(root, animated: true)
     }
     
     private func presentPrivacyPolicy() {

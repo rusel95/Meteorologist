@@ -19,9 +19,7 @@ protocol SettingsModelInput {
 }
 
 enum SettingsEvent: Event {
-    
     case profileSelected, privacyPolicySelected, logoutSelected
-    
 }
 
 protocol SettingsModelOutput: class, ModelOutput {}
@@ -53,9 +51,7 @@ class SettingsModel: EventNode {
     }
     
     struct DisplayableSettingsSectionData {
-        
         let title: String
-        
     }
     
     weak var output: SettingsModelOutput!

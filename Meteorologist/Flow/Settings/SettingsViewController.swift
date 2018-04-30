@@ -38,7 +38,6 @@ class SettingsViewController: UIViewController {
     }
     
     private func setupTableView() {
-        tableView.registerReusableCell(cellType: SettingsTableViewCell.self)
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 44
     }
@@ -52,7 +51,7 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(indexPath, cellType: SettingsTableViewCell.self)
+        let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.settingsTableViewCell, for: indexPath)!
         cell.setup(with: model.settingsSectionData(at: indexPath.row))
         return cell
     }
@@ -64,4 +63,25 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
     
 }
 
-extension SettingsViewController: SettingsViewControllerInput {}
+extension SettingsViewController: SettingsViewControllerInput {
+    
+    func presentError(message: String) {
+        
+    }
+    
+    func presentSuccess(message: String) {
+        
+    }
+    
+    func presentStatus(message: String) {
+        
+    }
+    
+    func showSpinner(message: String?, blockUI: Bool) {
+        
+    }
+    
+    func hideSpinner() {
+        
+    }
+}

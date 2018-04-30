@@ -34,6 +34,18 @@ class FeedViewController: UIViewController {
         cityPickerView.delegate = self
         cityPickerView.dataSource = self
         weatherChartView.delegate = self
+        setupTableView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        model.perform(action: .viewAppeared)
+    }
+    
+    private func setupTableView() {
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 44
+        tableView.registerReusableCell(cellType: WeatherItemCell.self)
     }
 }
 
@@ -43,7 +55,7 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.weatherItemTVC, for: indexPath)!
+        let cell = tableView.dequeueReusableCell(indexPath, cellType: WeatherItemCell.self)
         cell.initWith(weatherItem: model.feedSectionData(at: indexPath.row))
         return cell
     }
@@ -126,7 +138,6 @@ extension FeedViewController: FeedViewControllerInput {
 }
 
 extension FeedViewController {
-    
     
     private func setVisualisationOptionsWith(data: ChartData) {
         let xAxix = weatherChartView.xAxis

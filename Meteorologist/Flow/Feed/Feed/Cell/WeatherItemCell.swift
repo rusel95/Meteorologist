@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WeatherItemTVC: UITableViewCell {
+class WeatherItemCell: UITableViewCell, NibReusable {
 
     @IBOutlet weak var weatherImageView: UIImageView!
     @IBOutlet weak var dateLabel: UILabel!
@@ -19,20 +19,20 @@ class WeatherItemTVC: UITableViewCell {
     @IBOutlet weak var windSpeed: UILabel!
     
     func initWith(weatherItem: WeatherItem) {
-        weatherImageView.image = getImageForWeather(description: weatherItem.icon)
-        summaryLabel.text = weatherItem.summary
-        humidityLabel.text = "Humidity: \(weatherItem.humidity ?? 0)"
-        pressureLabel.text = "Pressure: \(weatherItem.pressure ?? 0)"
-        windSpeed.text = "Windspeed: \(weatherItem.windSpeed ?? 0)"
+        weatherImageView?.image = getImageForWeather(description: weatherItem.icon)
+        summaryLabel?.text = weatherItem.summary
+        humidityLabel?.text = "Humidity: \(weatherItem.humidity ?? 0)"
+        pressureLabel?.text = "Pressure: \(weatherItem.pressure ?? 0)"
+        windSpeed?.text = "Windspeed: \(weatherItem.windSpeed ?? 0)"
         
         if let hourlyItem = weatherItem as? HourlyItem {
             let dateFormatter = DateFormatter(withFormat: "E HH:mm", locale: "ua_UA")
-            dateLabel.text = dateFormatter.string(from: hourlyItem.time)
-            temperatureLabel.text = "\(hourlyItem.temperature.rounded(toPlaces: 2))°C"
+            dateLabel?.text = dateFormatter.string(from: hourlyItem.time)
+            temperatureLabel?.text = "\(hourlyItem.temperature.rounded(toPlaces: 2))°C"
         } else if let dailyItem = weatherItem as? DailyItem {
             let dateFormatter = DateFormatter(withFormat: "MMM d", locale: "ua_UA")
-            dateLabel.text = dateFormatter.string(from: dailyItem.time)
-            temperatureLabel.text = "\(dailyItem.temperatureLow.rounded(toPlaces: 2))°C - \(dailyItem.temperatureHigh.rounded(toPlaces: 2))°C"
+            dateLabel?.text = dateFormatter.string(from: dailyItem.time)
+            temperatureLabel?.text = "\(dailyItem.temperatureLow.rounded(toPlaces: 2))°C - \(dailyItem.temperatureHigh.rounded(toPlaces: 2))°C"
         }
     }
     

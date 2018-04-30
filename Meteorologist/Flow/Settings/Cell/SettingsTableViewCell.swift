@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingsTableViewCell: UITableViewCell {
+class SettingsTableViewCell: UITableViewCell, NibReusable {
     
     @IBOutlet weak var titleLabel: UILabel!
     
